@@ -15,19 +15,10 @@ function App() {
     <>
         <Router>
             <Routes>
-                <Route exact path="/login">
-                    <LoginPage />
-                </Route>
-
-                <Route exact path="/register">
-                    <RegisterPage />
-                </Route>
-                <Route exact path="/dashboard">
-                    <Dashboard/>
-                </Route>
-                <Route path="/">
-                    <Navigate to="/dashboard"/>
-                </Route>
+                <Route path="/login" element={<LoginPage/>} exact/>
+                <Route path="/register" element={<RegisterPage/>} exact/>
+                <Route path="/dashboard" element={<Dashboard/>} exact/>
+                <Route path="/" element={<Navigate to="/dashboard"/>}/>
             </Routes>
         </Router>
     </>
