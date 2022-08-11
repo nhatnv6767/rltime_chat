@@ -1,9 +1,9 @@
 import React from 'react';
 
-const LoginPageFooter = () => {
+const LoginPageFooter = ({handleLogin, isFormValid}) => {
     return (
         <div>
-            
+
         </div>
     );
 };
