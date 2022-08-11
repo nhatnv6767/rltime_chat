@@ -1,10 +1,16 @@
 import React from 'react';
+import {Typography} from "@mui/material";
 
 const LoginPageHeader = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Typography>
+                Welcome Back!
+            </Typography>
+            <Typography>
+                We are happy that you are with us!
+            </Typography>
+        </>
     );
 };
 
