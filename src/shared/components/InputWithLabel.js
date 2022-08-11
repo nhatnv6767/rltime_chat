@@ -34,6 +34,12 @@ const InputWithLabel = (props) => {
             <Label>
                 {label}
             </Label>
+            <Input
+                value={value}
+                onChange={handleValueChange}
+                type={type}
+                placehoder={placehoder}
+            />
         </Wrapper>
     );
 };
