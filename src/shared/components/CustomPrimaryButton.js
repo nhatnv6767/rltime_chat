@@ -20,6 +20,8 @@ const CustomPrimaryButton = ({
                 height: "40px",
             }}
             style={additionalStyles ? additionalStyles : {}}
+            disabled={disabled}
+            onClick={onClick}
         >
             {label}
         </Button>
