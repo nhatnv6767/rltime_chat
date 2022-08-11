@@ -1,12 +1,16 @@
 import React from 'react';
 import CustomPrimaryButton from "../../shared/components/CustomPrimaryButton";
 import RedirectInfo from "../../shared/components/RedirectInfo";
+import {useNavigate} from "react-router-dom";
 
 const LoginPageFooter = ({handleLogin, isFormValid}) => {
 
+    const history = useNavigate();
     const handlePushToRegisterPage = () => {
+        history("/register");
+    };
 
-    }
+
     return (
         <>
             <div>
