@@ -1,5 +1,12 @@
 import React from 'react';
 import {Typography} from "@mui/material";
+import {styled} from "@mui/material/styles";
+
+const RedirectText = styled("span")({
+    color: "#00AFF4",
+    fontWeight: 500,
+    cursor: "pointer"
+});
 
 const RedirectInfo = ({
                           text,
