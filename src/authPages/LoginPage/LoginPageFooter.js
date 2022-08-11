@@ -3,6 +3,10 @@ import CustomPrimaryButton from "../../shared/components/CustomPrimaryButton";
 import RedirectInfo from "../../shared/components/RedirectInfo";
 
 const LoginPageFooter = ({handleLogin, isFormValid}) => {
+
+    const handlePushToRegisterPage = () => {
+
+    }
     return (
         <>
             <div>
@@ -13,7 +17,12 @@ const LoginPageFooter = ({handleLogin, isFormValid}) => {
                     onClick={handleLogin}
                 />
             </div>
-            <RedirectInfo/>
+            <RedirectInfo
+                text="Need an account?"
+                redirectText="Create an account"
+                additionalStyles={{marginTop: "5px"}}
+                redirectHandler={handlePushToRegisterPage}
+            />
         </>
     );
 };
