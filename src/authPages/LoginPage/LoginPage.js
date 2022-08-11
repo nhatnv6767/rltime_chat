@@ -3,6 +3,7 @@ import AuthBox from "../../shared/components/AuthBox";
 import LoginPageHeader from "./LoginPageHeader";
 import LoginPageInputs from "./LoginPageInputs";
 import LoginPageFooter from "./LoginPageFooter";
+import {validateLoginForm} from "../../shared/utils/validators";
 
 const LoginPage = () => {
     const [mail, setMail] = useState("");
