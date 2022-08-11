@@ -22,7 +22,7 @@ const LoginPageFooter = ({handleLogin, isFormValid}) => {
                 />
             </div>
             <RedirectInfo
-                text="Need an account?"
+                text="Need an account? "
                 redirectText="Create an account"
                 additionalStyles={{marginTop: "5px"}}
                 redirectHandler={handlePushToRegisterPage}
