@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import {
     BrowserRouter as Router,
-    Routes as Switch,
+    Routes,
     Route,
-    Navigate as Redirect,
+    Navigate,
 } from "react-router-dom"
 import LoginPage from "./authPages/LoginPage/LoginPage";
 import RegisterPage from "./authPages/RegisterPage/RegisterPage";
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
         <Router>
-            <Switch>
+            <Routes>
                 <Route exact path="/login">
                     <LoginPage />
                 </Route>
@@ -26,9 +26,9 @@ function App() {
                     <Dashboard/>
                 </Route>
                 <Route path="/">
-                    <Redirect to="/dashboard"/>
+                    <Navigate to="/dashboard"/>
                 </Route>
-            </Switch>
+            </Routes>
         </Router>
     </>
   );
