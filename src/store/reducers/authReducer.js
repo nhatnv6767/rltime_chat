@@ -7,6 +7,8 @@ const reducer = (state = initState, action) => {
         case "DUMMY":
             return {
                 ...state,
-            }
+            };
+            default:
+                return state;
     }
 }
