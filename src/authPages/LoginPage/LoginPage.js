@@ -14,6 +14,8 @@ const LoginPage = () => {
         setIsFormValid(validateLoginForm({mail, password}));
     }, [mail, password, setIsFormValid]);
     const handleLogin = () => {
+        console.log(mail);
+        console.log(password);
         console.log("Login in");
     };
     return (
