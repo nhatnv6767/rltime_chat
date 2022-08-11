@@ -15,6 +15,18 @@ const Label = styled("p")({
     fontSize: "16px",
 })
 
+const Input = styled("input")({
+    flexGrow: 1,
+    height: "40px",
+    border: "1px solid black",
+    borderRadius:"5px",
+    color: "#dcddde",
+    background: "#35393f",
+    margin: 0,
+    fontSize: "16px",
+    padding: "0 5px"
+})
+
 const InputWithLabel = (props) => {
     return (
         <div>
