@@ -11,11 +11,19 @@ const BoxWrapper = styled("div")({
     background: "#5865F2",
 })
 
-const AuthBox = () => {
+const AuthBox = (props) => {
     return (
-        <div>
-
-        </div>
+        <BoxWrapper>
+            <Box
+                sx={{
+                    width: 700,
+                    height: 400,
+                    bgcolor: "#36393f",
+                }}
+            >
+                {props.children}
+            </Box>
+        </BoxWrapper>
     );
 };
 
