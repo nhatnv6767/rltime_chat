@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4460c884-0f65-4ebe-b7e2-917f7e0b4cf6" name="Changes" comment="#31 Removing unnecessary files 2">
+    <list default="true" id="4460c884-0f65-4ebe-b7e2-917f7e0b4cf6" name="Changes" comment="#32 Configuring Redux Store 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2D7RkvMS5nGiCIQLnIG4cmnEcQQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -77,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660048282408</updated>
-      <workItem from="1660048283500" duration="2962000" />
+      <workItem from="1660048283500" duration="3218000" />
     </task>
     <task id="LOCAL-00001" summary="#30 Install Dependencies 1">
       <created>1660218710109</created>
@@ -121,7 +122,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660219352991</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="#31 Removing unnecessary files 3">
+      <created>1660219451534</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660219451534</updated>
+    </task>
+    <task id="LOCAL-00008" summary="#32 Configuring Redux Store 1">
+      <created>1660219573887</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660219573887</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +162,8 @@
     <MESSAGE value="#30 Install Dependencies 2.1" />
     <MESSAGE value="#31 Removing unnecessary files 1" />
     <MESSAGE value="#31 Removing unnecessary files 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="#31 Removing unnecessary files 2" />
+    <MESSAGE value="#31 Removing unnecessary files 3" />
+    <MESSAGE value="#32 Configuring Redux Store 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="#32 Configuring Redux Store 1" />
   </component>
 </project>
