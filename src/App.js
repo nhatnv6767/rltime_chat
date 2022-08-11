@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes as Switch,
     Route,
-    Redirect
+    Navigate as Redirect,
 } from "react-router-dom"
+import LoginPage from "./authPages/LoginPage/LoginPage";
+import RegisterPage from "./authPages/RegisterPage/RegisterPage";
+import Dashboard from "./Dashboard/Dashboard";
 
 function App() {
   return (
