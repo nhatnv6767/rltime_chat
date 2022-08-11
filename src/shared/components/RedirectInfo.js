@@ -21,7 +21,11 @@ const RedirectInfo = ({
             variant="subtitle2"
         >
             {text}
-
+            <RedirectText
+                onClick={redirectHandler}
+            >
+                {redirectText}
+            </RedirectText>
         </Typography>
     );
 };
