@@ -9,9 +9,25 @@ import {
 
 function App() {
   return (
-    <div className="App">
-      Its empty page
-    </div>
+    <>
+        <Router>
+            <Switch>
+                <Route exact path="/login">
+                    <LoginPage />
+                </Route>
+
+                <Route exact path="/register">
+                    <RegisterPage />
+                </Route>
+                <Route exact path="/dashboard">
+                    <Dashboard/>
+                </Route>
+                <Route path="/">
+                    <Redirect to="/dashboard"/>
+                </Route>
+            </Switch>
+        </Router>
+    </>
   );
 }
 
