@@ -28,10 +28,13 @@ const Input = styled("input")({
 })
 
 const InputWithLabel = (props) => {
+    const {value, setValue, label, type, placehoder} = props;
     return (
-        <div>
-
-        </div>
+        <Wrapper>
+            <Label>
+                {label}
+            </Label>
+        </Wrapper>
     );
 };
 
