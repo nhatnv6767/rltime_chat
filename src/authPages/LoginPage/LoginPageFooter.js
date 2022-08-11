@@ -2,6 +2,7 @@ import React from 'react';
 import CustomPrimaryButton from "../../shared/components/CustomPrimaryButton";
 import RedirectInfo from "../../shared/components/RedirectInfo";
 import {useNavigate} from "react-router-dom";
+import {Tooltip} from "@mui/material";
 
 const LoginPageFooter = ({handleLogin, isFormValid}) => {
 
