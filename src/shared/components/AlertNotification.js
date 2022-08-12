@@ -5,9 +5,11 @@ import {connect} from 'react-redux';
 
 const AlertNotification = (props) => {
     return (
-        <div>
-
-        </div>
+        <Snackbar>
+            <Alert severity="info">
+                Alert message
+            </Alert>
+        </Snackbar>
     );
 };
 
