@@ -18,6 +18,13 @@ export const getActions = (dispatch) => {
     };
 };
 
+const setUserDetails = (userDetails) => {
+    return {
+        type: authActions.SET_USER_DETAILS,
+        userDetails,
+    };
+};
+
 
 const login = (userDetails, history) => {
     return async (dispatch) => {
