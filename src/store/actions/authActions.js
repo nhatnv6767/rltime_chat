@@ -1,5 +1,4 @@
 import * as api from '../../api';
-import async from "async";
 
 export const authActions = {
     SET_USER_DETAILS: 'AUTH.SET_USER_DETAILS',
@@ -33,7 +32,22 @@ const login = (userDetails, history) => {
         if (response.error) {
             // show error message in alert
         } else {
-            const {userDetails} = response.data;
+            const {userDetails} = response?.data;
+            localStorage.setItem("user", JSON.stringify(userDetails));
+
+            dispatch(setUserDetails(userDetails));
+            history.push("/dashboard");
+        }
+    };
+};
+const register = (userDetails, history) => {
+    return async (dispatch) => {
+        const response = await api.register(userDetails);
+
+        if (response.error) {
+            // show error message in alert
+        } else {
+            const {userDetails} = response?.data;
             localStorage.setItem("user", JSON.stringify(userDetails));
 
             dispatch(setUserDetails(userDetails));
