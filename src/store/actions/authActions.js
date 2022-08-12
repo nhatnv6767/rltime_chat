@@ -28,6 +28,9 @@ const login = (userDetails, history) => {
         } else {
             const {userDetails} = response.data;
             localStorage.setItem("user", JSON.stringify(userDetails));
+
+            dispatch(setUserDetails(userDetails));
+            history.push("/dashboard");
         }
     };
 };
