@@ -3,6 +3,7 @@ import AuthBox from "../../shared/components/AuthBox";
 import {Typography} from "@mui/material";
 import RegisterPageInputs from "./RegisterPageInputs";
 import RegisterPageFooter from "./RegisterPageFooter";
+import {validateRegisterForm} from "../../shared/utils/validators";
 
 const RegisterPage = () => {
     const [mail, setMail] = useState("");
