@@ -37,4 +37,10 @@ const LoginPage = () => {
     );
 };
 
+const mapActionsToProps = (dispatch) => {
+    return {
+        ...getActions(dispatch)
+    };
+};
+
 export default LoginPage;
