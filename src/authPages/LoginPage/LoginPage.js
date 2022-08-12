@@ -43,4 +43,4 @@ const mapActionsToProps = (dispatch) => {
     };
 };
 
-export default LoginPage;
+export default connect(null, mapActionsToProps)(LoginPage);
