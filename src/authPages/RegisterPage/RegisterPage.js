@@ -19,6 +19,11 @@ const RegisterPage = () => {
     };
 
     useEffect(() => {
+        setIsFormValid(validateRegisterForm({
+            mail,
+            username,
+            password,
+        }));
     }, [mail, username, password, setIsFormValid]);
     return (
         <AuthBox>
