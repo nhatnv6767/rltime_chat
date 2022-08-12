@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import AuthBox from "../../shared/components/AuthBox";
 import {Typography} from "@mui/material";
 import RegisterPageInputs from "./RegisterPageInputs";
@@ -16,7 +16,10 @@ const RegisterPage = () => {
         console.log(username);
         console.log(password);
         console.log("Registering");
-    }
+    };
+
+    useEffect(() => {
+    }, [mail, username, password, setIsFormValid]);
     return (
         <AuthBox>
             <Typography variant="h5" sx={{color: 'white'}}>
