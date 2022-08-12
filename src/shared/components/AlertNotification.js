@@ -10,7 +10,7 @@ const AlertNotification = (props) => {
             open
             onClose={() => {
             }}
-            autoHideDuration={6000}
+            // autoHideDuration={6000}
         >
             <Alert severity="info">
                 Alert message
