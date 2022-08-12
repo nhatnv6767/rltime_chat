@@ -5,7 +5,13 @@ import {connect} from 'react-redux';
 
 const AlertNotification = (props) => {
     return (
-        <Snackbar>
+        <Snackbar
+            anchorOrigin={{vertical: "bottom", horizontal: "center"}}
+            open
+            onClose={() => {
+            }}
+            autoHideDuration={6000}
+        >
             <Alert severity="info">
                 Alert message
             </Alert>
