@@ -11,7 +11,7 @@ const RegisterPage = () => {
     const [isFormValid, setIsFormValid] = useState(false);
     return (
         <AuthBox>
-            <Typography variant="5" sx={{color: 'white'}}>
+            <Typography variant="h5" sx={{color: 'white'}}>
                 Create an account
             </Typography>
             <RegisterPageInputs
