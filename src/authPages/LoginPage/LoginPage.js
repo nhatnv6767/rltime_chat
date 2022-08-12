@@ -4,6 +4,8 @@ import LoginPageHeader from "./LoginPageHeader";
 import LoginPageInputs from "./LoginPageInputs";
 import LoginPageFooter from "./LoginPageFooter";
 import {validateLoginForm} from "../../shared/utils/validators";
+import {connect} from "react-redux";
+import {getActions} from "../../store/actions/authActions";
 
 const LoginPage = () => {
     const [mail, setMail] = useState("");
