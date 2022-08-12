@@ -1,7 +1,7 @@
 import * as api from '../../api';
 import async from "async";
 
-const authActions = {
+export const authActions = {
     SET_USER_DETAILS: 'AUTH.SET_USER_DETAILS',
 };
 
