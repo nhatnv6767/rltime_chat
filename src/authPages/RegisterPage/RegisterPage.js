@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import AuthBox from "../../shared/components/AuthBox";
 import {Typography} from "@mui/material";
+import RegisterPageInputs from "./RegisterPageInputs";
 
 const RegisterPage = () => {
     const [mail, setMail] = useState("");
@@ -13,6 +14,14 @@ const RegisterPage = () => {
             <Typography variant="5" sx={{color: 'white'}}>
                 Create an account
             </Typography>
+            <RegisterPageInputs
+                mail={mail}
+                setMail={setMail}
+                username={username}
+                setUsername={setUsername}
+                password={password}
+                setPassword={setPassword}
+            />
         </AuthBox>
     );
 };
