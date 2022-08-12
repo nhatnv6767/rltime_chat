@@ -4,6 +4,9 @@ import {Typography} from "@mui/material";
 import RegisterPageInputs from "./RegisterPageInputs";
 import RegisterPageFooter from "./RegisterPageFooter";
 import {validateRegisterForm} from "../../shared/utils/validators";
+import {connect} from "react-redux";
+import {getActions} from "../../store/actions/authActions";
+import {useNavigate} from "react-router-dom";
 
 const RegisterPage = () => {
     const [mail, setMail] = useState("");
@@ -49,4 +52,11 @@ const RegisterPage = () => {
     );
 };
 
-export default RegisterPage;
+
+const mapActionsToProps = (dispatch) => {
+    return {
+        ...getActions(dispatch)
+    };
+};
+
+export default connect(null, mapActionsToProps)(RegisterPage);
