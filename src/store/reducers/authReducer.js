@@ -1,6 +1,8 @@
+import authActions from "../actions/authActions";
+
 const initState = {
     userDetails: null
-}
+};
 
 const reducer = (state = initState, action) => {
     switch (action.type) {
@@ -8,9 +10,9 @@ const reducer = (state = initState, action) => {
             return {
                 ...state,
             };
-            default:
-                return state;
+        default:
+            return state;
     }
-}
+};
 
 export default reducer;
