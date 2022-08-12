@@ -6,7 +6,7 @@ export const validateLoginForm = ({mail, password}) => {
 };
 
 export const validateRegisterForm = ({mail, username, password}) => {
-    return validateMail(mail) && validatePassword(password) && isUsernameValid(username);
+    return validateMail(mail) && validatePassword(password) && validateUsername(username);
 };
 
 const validatePassword = (password) => {
@@ -18,7 +18,7 @@ const validateMail = (mail) => {
     return emailPattern.test(mail);
 };
 
-const isUsernameValid = (username) => {
+const validateUsername = (username) => {
     return username.length > 2 && username.length < 13;
 };
 
