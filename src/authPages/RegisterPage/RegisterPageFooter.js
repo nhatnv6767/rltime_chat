@@ -14,8 +14,8 @@ const getFormValidMessage = () => {
 const RegisterPageFooter = ({handleLogin, isFormValid}) => {
 
     const history = useNavigate();
-    const handlePushToRegisterPage = () => {
-        history("/register");
+    const handlePushToLoginPage = () => {
+        history("/login");
     };
 
 
@@ -37,7 +37,7 @@ const RegisterPageFooter = ({handleLogin, isFormValid}) => {
                 text="Need an account? "
                 redirectText="Create an account"
                 additionalStyles={{marginTop: "5px"}}
-                redirectHandler={handlePushToRegisterPage}
+                redirectHandler={handlePushToLoginPage}
             />
         </>
     );
