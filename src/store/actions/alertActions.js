@@ -25,3 +25,5 @@ export const closeAlertMessage = () => {
         type: alertActions.CLOSE_ALERT_MESSAGE,
     };
 };
+
+export default alertActions;
