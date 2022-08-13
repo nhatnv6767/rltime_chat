@@ -20,4 +20,10 @@ const AlertNotification = (props) => {
     );
 };
 
+const mapStoreStateToProps = (state) => {
+    return {
+        ...state.alert
+    };
+};
+
 export default AlertNotification;
