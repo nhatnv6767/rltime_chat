@@ -12,9 +12,16 @@ export const getActions = (dispatch) => {
     };
 };
 
-const openAlertMessage = (content) => {
+export const openAlertMessage = (content) => {
     return {
         type: alertActions.OPEN_ALERT_MESSAGE,
         content,
+    };
+};
+
+
+export const closeAlertMessage = () => {
+    return {
+        type: alertActions.CLOSE_ALERT_MESSAGE,
     };
 };
