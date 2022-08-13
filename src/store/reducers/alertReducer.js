@@ -14,6 +14,13 @@ const reducer = (state = initState, action) => {
                 alertMessageContent: action.content,
             };
 
+        case alertActions.CLOSE_ALERT_MESSAGE:
+            return {
+                ...state,
+                showAlertMessage: false,
+                alertMessageContent: null,
+            }
+
         default:
             return state;
     }
