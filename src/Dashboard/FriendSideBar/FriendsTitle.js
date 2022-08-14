@@ -1,7 +1,7 @@
 import React from 'react';
 import {Typography} from "@mui/material";
 
-const FriendsTitle = () => {
+const FriendsTitle = ({title}) => {
     return (
         <Typography
             sx={{
@@ -11,6 +11,7 @@ const FriendsTitle = () => {
                 marginTop: "10px",
             }}
         >
+            {title}
         </Typography>
     );
 };
