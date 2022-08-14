@@ -1,10 +1,10 @@
 import React from 'react';
+import {Typography} from "@mui/material";
 
 const FriendsTitle = () => {
     return (
-        <div>
-
-        </div>
+        <Typography>
+        </Typography>
     );
 };
 
