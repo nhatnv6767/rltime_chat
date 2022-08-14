@@ -2,6 +2,7 @@ import React from 'react';
 import {styled} from "@mui/material/styles";
 import SideBar from "./SideBar/SideBar";
 import FriendSideBar from "./FriendSideBar/FriendSideBar";
+import Messenger from "./Messenger/Messenger";
 
 const Wrapper = styled("div")({
     width: "100%",
