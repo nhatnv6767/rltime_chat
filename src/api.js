@@ -8,10 +8,10 @@ const apiClient = axios.create({
 export const login = async (data) => {
     try {
         return await apiClient.post("/auth/login", data);
-    } catch (e) {
+    } catch (exception) {
         return {
             error: true,
-            e
+            exception
         };
     }
 };
@@ -19,10 +19,10 @@ export const login = async (data) => {
 export const register = async (data) => {
     try {
         return await apiClient.post("/auth/register", data);
-    } catch (e) {
+    } catch (exception) {
         return {
             error: true,
-            e
+            exception
         };
     }
 };

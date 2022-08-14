@@ -32,7 +32,7 @@ const login = (userDetails, history) => {
         console.log(response);
         if (response.error) {
             // show error message in alert
-            dispatch(openAlertMessage(response?.e?.response?.data));
+            dispatch(openAlertMessage(response?.exception?.response?.data));
         } else {
             const {userDetails} = response?.data;
             localStorage.setItem("user", JSON.stringify(userDetails));
@@ -47,7 +47,7 @@ const register = (userDetails, history) => {
         const response = await api.register(userDetails);
         if (response.error) {
             // show error message in alert
-            dispatch(openAlertMessage(response?.e?.response?.data));
+            dispatch(openAlertMessage(response?.exception?.response?.data));
         } else {
             const {userDetails} = response?.data;
             localStorage.setItem("user", JSON.stringify(userDetails));
