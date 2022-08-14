@@ -5,9 +5,15 @@ const apiClient = axios.create({
     timeout: 1000,
 });
 
+/* Intercepting the request and adding the token to the header. */
 apiClient.interceptors.request.use((config) => {
+    const userDetails = localStorage.getItem("user");
 
-})
+    if (userDetails) {
+        const token = JSON.parse(userDetails).token;
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+});
 
 export const login = async (data) => {
     try {
