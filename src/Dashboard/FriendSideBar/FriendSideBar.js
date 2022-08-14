@@ -17,6 +17,8 @@ const FriendSideBar = () => {
         <MainContainer>
             <AddFriendButton/>
             <FriendsTitle title="Private Messages"/>
+            <FriendsList/>
+            <FriendsTitle title="Invitations"/>
         </MainContainer>
     );
 };
