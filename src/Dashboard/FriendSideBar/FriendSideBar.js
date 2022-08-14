@@ -2,6 +2,8 @@ import React from 'react';
 import {styled} from "@mui/material/styles";
 import AddFriendButton from "./AddFriendButton";
 import FriendsTitle from "./FriendsTitle";
+import FriendsList from "./FriendsList/FriendsList";
+import PendingInvitationsList from "./PendingInvitationsList/PendingInvitationsList";
 
 const MainContainer = styled("div")({
     width: "224px",
@@ -19,6 +21,7 @@ const FriendSideBar = () => {
             <FriendsTitle title="Private Messages"/>
             <FriendsList/>
             <FriendsTitle title="Invitations"/>
+            <PendingInvitationsList/>
         </MainContainer>
     );
 };
