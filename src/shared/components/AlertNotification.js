@@ -32,4 +32,4 @@ const mapActionsToProps = (dispatch) => {
     };
 };
 
-export default AlertNotification;
+export default connect(mapStoreStateToProps, mapActionsToProps)(AlertNotification);
