@@ -26,4 +26,10 @@ const mapStoreStateToProps = ({alert}) => {
     };
 };
 
+const mapActionsToProps = (dispatch) => {
+    return {
+        ...getActions(dispatch)
+    };
+};
+
 export default AlertNotification;
