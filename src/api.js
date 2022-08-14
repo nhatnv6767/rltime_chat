@@ -15,6 +15,8 @@ apiClient.interceptors.request.use((config) => {
     }
 });
 
+//public root
+
 export const login = async (data) => {
     try {
         return await apiClient.post("/auth/login", data);
@@ -36,3 +38,15 @@ export const register = async (data) => {
         };
     }
 };
+
+
+// secure root
+
+
+const checkResponseCode = (exception) => {
+    const responseCode = exception?.response?.status;
+
+    if (responseCode) {
+        (responseCode === 401 || responseCode === 403) && logout();
+    }
+}
