@@ -1,10 +1,11 @@
 import React from 'react';
+import CustomPrimaryButton from "../../shared/components/CustomPrimaryButton";
 
 const AddFriendButton = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            <CustomPrimaryButton/>
+        </>
     );
 };
 
