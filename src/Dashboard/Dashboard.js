@@ -1,6 +1,5 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
-import {AppBar} from "@mui/material";
 
 const Wrapper = styled("div")({
     width: "100%",
