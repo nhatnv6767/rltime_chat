@@ -20,9 +20,9 @@ const AlertNotification = (props) => {
     );
 };
 
-const mapStoreStateToProps = (state) => {
+const mapStoreStateToProps = ({alert}) => {
     return {
-        ...state.alert
+        ...alert
     };
 };
 
