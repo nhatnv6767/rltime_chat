@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const AddFriendDialog = ({
                              isDialogOpen,
@@ -18,8 +18,10 @@ const AddFriendDialog = ({
     const handleCloseDialog = () => {
         closeDialogHandler();
         setMail("")
-
     }
+
+    useEffect(() => {
+    }, [mail, setIsFormValid])
     return (
         <div>
 
