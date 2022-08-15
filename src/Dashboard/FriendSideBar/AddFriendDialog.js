@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {validateMail} from "../../shared/utils/validators";
 
 const AddFriendDialog = ({
                              isDialogOpen,
@@ -13,15 +14,16 @@ const AddFriendDialog = ({
 
     const handleSendInvitation = (invitation) => {
         // send friend request to server
-    }
+    };
 
     const handleCloseDialog = () => {
         closeDialogHandler();
-        setMail("")
-    }
+        setMail("");
+    };
 
     useEffect(() => {
-    }, [mail, setIsFormValid])
+        setIsFormValid(validateMail(mail));
+    }, [mail, setIsFormValid]);
     return (
         <div>
 
