@@ -1,6 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const AddFriendDialog = () => {
+const AddFriendDialog = ({
+                             isDialogOpen,
+                             closeDialogHandler,
+                             sendFriendInvitaion = () => {
+                             }
+
+                         }) => {
+
+    const [mail, setMail] = useState("")
     return (
         <div>
 
