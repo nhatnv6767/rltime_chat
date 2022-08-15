@@ -8,7 +8,18 @@ const AddFriendDialog = ({
 
                          }) => {
 
-    const [mail, setMail] = useState("")
+    const [mail, setMail] = useState("");
+    const [isFormValid, setIsFormValid] = useState("");
+
+    const handleSendInvitation = (invitation) => {
+        // send friend request to server
+    }
+
+    const handleCloseDialog = () => {
+        closeDialogHandler();
+        setMail("")
+
+    }
     return (
         <div>
 
