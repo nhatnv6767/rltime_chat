@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Tooltip} from "@mui/material";
+import {Box, Tooltip, Typography} from "@mui/material";
+import Avatar from "../../../shared/components/Avatar";
 
 const PendingInvitationsListItem = ({
                                         id,
@@ -24,7 +25,12 @@ const PendingInvitationsListItem = ({
         <Tooltip
             title={mail}
         >
-
+            <div style={{width: "100%"}}>
+                <Box>
+                    <Avatar username={username}/>
+                    <Typography>{username}</Typography>
+                </Box>
+            </div>
         </Tooltip>
     );
 };
