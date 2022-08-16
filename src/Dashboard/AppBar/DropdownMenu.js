@@ -4,6 +4,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import {IconButton} from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import {logout} from "../../shared/utils/auth";
 
 export default function DropdownMenu() {
     const [anchorEl, setAnchorEl] = React.useState <null | HTMLElement>(null);
@@ -15,6 +16,7 @@ export default function DropdownMenu() {
     const handleMenuClose = () => {
         setAnchorEl(null);
     };
+
 
     return (
         <div>
@@ -33,9 +35,7 @@ export default function DropdownMenu() {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-                <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-                <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+                <MenuItem onClick={logout}>Logout</MenuItem>
             </Menu>
         </div>
     );
