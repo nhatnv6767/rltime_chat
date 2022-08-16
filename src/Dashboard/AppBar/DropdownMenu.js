@@ -6,10 +6,10 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {logout} from "../../shared/utils/auth";
 
 export default function DropdownMenu() {
-    const [anchorEl, setAnchorEl] = React.useState <null | HTMLElement>(null);
+    const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
-    const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
     };
     const handleMenuClose = () => {
