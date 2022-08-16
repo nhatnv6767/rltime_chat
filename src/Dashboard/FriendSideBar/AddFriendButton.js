@@ -14,6 +14,10 @@ const AddFriendButton = () => {
     const handleOpenAddFriendDialog = () => {
         setIsDialogOpen(true);
     };
+
+    const handleCloseAddFriendDialog = () => {
+        setIsDialogOpen(false);
+    };
     return (
         <>
             <CustomPrimaryButton
@@ -23,7 +27,7 @@ const AddFriendButton = () => {
             />
             <AddFriendButton
                 isDialogOpen={isDialogOpen}
-                closeDialogHandler={handleOpenAddFriendDialog}
+                closeDialogHandler={handleCloseAddFriendDialog}
             />
         </>
     );
