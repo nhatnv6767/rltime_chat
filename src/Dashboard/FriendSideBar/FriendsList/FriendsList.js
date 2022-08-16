@@ -29,7 +29,15 @@ const MainContainer = styled("div")({
 const FriendsList = () => {
     return (
         <MainContainer>
+            {DUMMY_FRIENDS.map(f => (
+                <FriendsListItem
+                    username={f.username}
+                    id={f.id}
+                    key={f.id}
+                    isOnline={f.isOnline}
+                />
 
+            ))}
         </MainContainer>
     );
 };
