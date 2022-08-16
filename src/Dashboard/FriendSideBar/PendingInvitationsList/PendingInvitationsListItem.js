@@ -28,7 +28,15 @@ const PendingInvitationsListItem = ({
             <div style={{width: "100%"}}>
                 <Box>
                     <Avatar username={username}/>
-                    <Typography>{username}</Typography>
+                    <Typography
+                        sx={{
+                            marginLeft: "7px",
+                            fontWeight: 700,
+                            color: "#8e9297",
+                            flexGrow: 1,
+                        }}
+                        variant="subtitle1"
+                    >{username}</Typography>
                 </Box>
             </div>
         </Tooltip>
