@@ -16,7 +16,7 @@ const FriendsListItem = ({id, username, isOnline}) => {
                 position: "relative",
             }}
         >
-
+            <Avatar username={username}/>
         </Button>
     );
 };
