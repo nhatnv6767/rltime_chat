@@ -26,7 +26,16 @@ const PendingInvitationsListItem = ({
             title={mail}
         >
             <div style={{width: "100%"}}>
-                <Box>
+                <Box
+                    sx={{
+                        width: "100%",
+                        height: "42px",
+                        marginTop: "10px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                    }}
+                >
                     <Avatar username={username}/>
                     <Typography
                         sx={{
