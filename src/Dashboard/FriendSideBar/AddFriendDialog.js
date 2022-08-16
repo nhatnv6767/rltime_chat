@@ -1,5 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {validateMail} from "../../shared/utils/validators";
+import {Dialog} from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContext from "@mui/material/DialogContentText";
+import {DialogTitle, Typography} from "@mui/material";
 
 const AddFriendDialog = ({
                              isDialogOpen,
@@ -26,7 +31,13 @@ const AddFriendDialog = ({
     }, [mail, setIsFormValid]);
     return (
         <div>
-
+            <Dialog open={isDialogOpen} onClose={handleCloseDialog}>
+                <DialogTitle>
+                    <Typography>
+                        Invite a Friend
+                    </Typography>
+                </DialogTitle>
+            </Dialog>
         </div>
     );
 };
