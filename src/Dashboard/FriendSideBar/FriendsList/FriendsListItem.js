@@ -28,7 +28,7 @@ const FriendsListItem = ({id, username, isOnline}) => {
                 variant="subtitle1"
                 align="left"
             >
-
+                {username}
             </Typography>
         </Button>
     );
