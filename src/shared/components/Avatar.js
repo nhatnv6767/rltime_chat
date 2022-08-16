@@ -17,8 +17,9 @@ const AvatarPreview = styled("div")({
 
 const Avatar = ({username, large}) => {
     return (
-        <div>
-        </div>
+        <AvatarPreview>
+            {username.substring(0, 2)}
+        </AvatarPreview>
     );
 };
 
