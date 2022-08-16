@@ -13,6 +13,7 @@ const OnlineIndicator = () => {
                 right: "5px",
             }}
         >
+            <FiberManualRecordIcon/>
         </Box>
     );
 };
