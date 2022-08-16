@@ -5,15 +5,14 @@ import FriendSideBar from './FriendSideBar/FriendSideBar';
 import Messenger from './Messenger/Messenger';
 import AppBar from './AppBar/AppBar';
 import {logout} from '../shared/utils/auth';
+import {connect} from 'react-redux';
+import {getActions} from '../store/actions/authActions';
 
 const Wrapper = styled('div')({
-  width: '100%',
-  height: '100vh',
-  display: 'flex',
+  width: '100%', height: '100vh', display: 'flex',
 });
 
-const Dashboard = () => {
-
+const Dashboard = ({setUserDetails}) => {
   useEffect(() => {
     const userDetails = localStorage.getItem('user');
     if (!userDetails) {
@@ -23,14 +22,18 @@ const Dashboard = () => {
     }
   }, []);
 
-  return (
-      <Wrapper>
-        <SideBar/>
-        <FriendSideBar/>
-        <Messenger/>
-        <AppBar/>
-      </Wrapper>
-  );
+  return (<Wrapper>
+    <SideBar/>
+    <FriendSideBar/>
+    <Messenger/>
+    <AppBar/>
+  </Wrapper>);
 };
 
-export default Dashboard;
+const mapActionsToProps = (dispatch) => {
+  return {
+    ...getActions(dispatch),
+  };
+};
+
+export default connect(null, mapActionsToProps)(Dashboard);
