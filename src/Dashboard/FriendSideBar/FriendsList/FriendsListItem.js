@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import Avatar from "../../../shared/components/Avatar";
 
 const FriendsListItem = ({id, username, isOnline}) => {
     return (
