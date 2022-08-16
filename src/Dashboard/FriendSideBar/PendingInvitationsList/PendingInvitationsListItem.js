@@ -46,14 +46,15 @@ const PendingInvitationsListItem = ({
                             flexGrow: 1,
                         }}
                         variant="subtitle1"
-                    >{username}</Typography>
+                    >
+                        {username}
+                    </Typography>
+                    <InvitationDecisionButtons
+                        disabled={buttonsDisabled}
+                        acceptInvitationHandler={handleAcceptInvitaion}
+                        rejectInvitationHandler={handleRejectInvitaion}
+                    />
                 </Box>
-                <InvitationDecisionButtons
-                    disabled={buttonsDisabled}
-                    acceptInvitationHandler={handleAcceptInvitaion}
-                    rejectInvitationHandler={handleRejectInvitaion}
-                />
-
             </div>
         </Tooltip>
     );
