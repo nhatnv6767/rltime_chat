@@ -32,6 +32,15 @@ const MainContainer = styled("div")({
 const PendingInvitationsList = () => {
     return (
         <MainContainer>
+            {DUMMY_INVITATIONS.map((invitation) => (
+                <PendingInvitationsListItem
+                    key={invitation._id}
+                    id={invitation._id}
+                    username={invitation.senderId.username}
+                    mail={invitation.senderId.mail}
+                />
+
+            ))}
         </MainContainer>
     );
 };
