@@ -1,10 +1,12 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 
-const FriendsListItem = () => {
+const FriendsListItem = ({id, username, isOnline}) => {
     return (
-        <div>
+        <Button
+        >
 
-        </div>
+        </Button>
     );
 };
 
