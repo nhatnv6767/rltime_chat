@@ -47,6 +47,12 @@ const PendingInvitationsListItem = ({
                         variant="subtitle1"
                     >{username}</Typography>
                 </Box>
+                <InvitationDecisionButtons
+                    disabled={buttonsDisabled}
+                    acceptInvitationHandler={handleAcceptInvitaion}
+                    rejectInvitationHandler={handleRejectInvitaion}
+                />
+
             </div>
         </Tooltip>
     );
