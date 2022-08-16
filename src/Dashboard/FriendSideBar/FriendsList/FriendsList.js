@@ -1,5 +1,6 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
+import FriendsListItem from "./FriendsListItem";
 
 const DUMMY_FRIENDS = [
     {
@@ -29,7 +30,7 @@ const MainContainer = styled("div")({
 const FriendsList = () => {
     return (
         <MainContainer>
-            {DUMMY_FRIENDS.map(f => (
+            {DUMMY_FRIENDS.map((f) => (
                 <FriendsListItem
                     username={f.username}
                     id={f.id}
