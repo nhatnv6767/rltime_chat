@@ -3,8 +3,9 @@ import {validateMail} from "../../shared/utils/validators";
 import {Dialog} from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContext from "@mui/material/DialogContentText";
+import DialogContentText from "@mui/material/DialogContentText";
 import {DialogTitle, Typography} from "@mui/material";
+
 
 const AddFriendDialog = ({
                              isDialogOpen,
@@ -37,6 +38,13 @@ const AddFriendDialog = ({
                         Invite a Friend
                     </Typography>
                 </DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        <Typography>
+                            Invite a Friend
+                        </Typography>
+                    </DialogContentText>
+                </DialogContent>
             </Dialog>
         </div>
     );
