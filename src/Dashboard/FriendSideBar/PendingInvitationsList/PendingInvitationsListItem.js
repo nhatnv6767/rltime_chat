@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Box, Tooltip, Typography} from "@mui/material";
 import Avatar from "../../../shared/components/Avatar";
+import InvitationDecisionButtons from "./InvitationDecisionButtons";
 
 const PendingInvitationsListItem = ({
                                         id,
