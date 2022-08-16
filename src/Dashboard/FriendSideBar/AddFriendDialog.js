@@ -5,6 +5,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import {DialogTitle, Typography} from "@mui/material";
+import InputWithLabel from "../../shared/components/InputWithLabel";
 
 
 const AddFriendDialog = ({
@@ -43,6 +44,13 @@ const AddFriendDialog = ({
                         <Typography>
                             Enter e-mail address of friend which you would like to invite
                         </Typography>
+                        <InputWithLabel
+                            label="Mail"
+                            type="text"
+                            value={mail}
+                            setValue={setMail}
+                            placeholder="Enter e-mail address"
+                        />
                     </DialogContentText>
                 </DialogContent>
             </Dialog>
