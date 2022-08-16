@@ -41,7 +41,7 @@ const AddFriendDialog = ({
                 <DialogContent>
                     <DialogContentText>
                         <Typography>
-                            Invite a Friend
+                            Enter e-mail address of friend which you would like to invite
                         </Typography>
                     </DialogContentText>
                 </DialogContent>
