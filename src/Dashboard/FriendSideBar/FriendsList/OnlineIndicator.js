@@ -4,8 +4,15 @@ import {Box} from '@mui/material';
 
 const OnlineIndicator = () => {
     return (
-        <Box>
-
+        <Box
+            sx={{
+                color: "#3ba55d",
+                display: "flex",
+                alignItems: "center",
+                position: "absolute",
+                right: "5px",
+            }}
+        >
         </Box>
     );
 };
