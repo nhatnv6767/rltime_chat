@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {styled} from "@mui/material/styles";
 import SideBar from "./SideBar/SideBar";
 import FriendSideBar from "./FriendSideBar/FriendSideBar";
@@ -12,6 +12,14 @@ const Wrapper = styled("div")({
 });
 
 const Dashboard = () => {
+
+    useEffect(() => {
+        const userDetails = localStorage.getItem("user");
+        if (!userDetails) {
+            window.location.pathname = "login";
+        }
+    }, []);
+
     return (
         <Wrapper>
             <SideBar/>
