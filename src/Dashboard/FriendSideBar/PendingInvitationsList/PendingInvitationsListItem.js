@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Tooltip} from "@mui/material";
 
 const PendingInvitationsListItem = ({
                                         id,
@@ -20,9 +21,11 @@ const PendingInvitationsListItem = ({
         setButtonsDisabled(true);
     };
     return (
-        <div>
+        <Tooltip
+            title={mail}
+        >
 
-        </div>
+        </Tooltip>
     );
 };
 
