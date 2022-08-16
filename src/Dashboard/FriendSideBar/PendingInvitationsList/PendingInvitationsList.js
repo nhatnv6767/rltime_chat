@@ -1,5 +1,6 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
+import PendingInvitationsListItem from "./PendingInvitationsListItem";
 
 const DUMMY_INVITATIONS = [
     {
@@ -18,7 +19,7 @@ const DUMMY_INVITATIONS = [
         }
 
     },
-]
+];
 
 const MainContainer = styled("div")({
     width: "100%",
