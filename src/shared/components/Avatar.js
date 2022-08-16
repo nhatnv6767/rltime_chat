@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Avatar = () => {
+const Avatar = ({username, large}) => {
     return (
         <div>
-
         </div>
     );
 };
