@@ -10,3 +10,9 @@ export const getActions = (dispatch) => {
             dispatch(sendFriendInvitaion(data, closeDialogHandler))
     }
 }
+
+const sendFriendInvitaion = (data, closeDialogHandler) => {
+    return async (dispatch) => {
+        const response = await api.sendFriendInvitaion(data, closeDialogHandler)
+    }
+}
