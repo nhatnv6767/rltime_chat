@@ -23,8 +23,9 @@ const AddFriendDialog = ({
 
     const handleSendInvitation = (invitation) => {
         sendFriendInvitaion({
-            targetMailAddress: mail,
-        })
+                targetMailAddress: mail,
+            }, handleCloseDialog
+        )
     };
 
     const handleCloseDialog = () => {
