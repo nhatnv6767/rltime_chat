@@ -22,7 +22,9 @@ const AddFriendDialog = ({
     const [isFormValid, setIsFormValid] = useState("");
 
     const handleSendInvitation = (invitation) => {
-        // send friend request to server
+        sendFriendInvitaion({
+            mail: mail,
+        })
     };
 
     const handleCloseDialog = () => {
