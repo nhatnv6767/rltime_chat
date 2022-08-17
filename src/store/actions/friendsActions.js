@@ -1,4 +1,5 @@
 import {openAlertMessage} from "./alertActions";
+import * as api from "../../api"
 
 export const friendsActions = {
     SET_FRIENDS: "FRIENDS.SET_FRIENDS",
