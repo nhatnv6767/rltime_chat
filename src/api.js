@@ -51,7 +51,7 @@ export const sendFriendInvitaion = async (data) => {
     try {
         return await apiClient.post("/friend-invitation/invite", data)
     } catch (exception) {
-        checkResponseCode()
+        checkResponseCode(exception)
     }
 }
 
