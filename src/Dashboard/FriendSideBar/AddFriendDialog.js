@@ -7,7 +7,8 @@ import DialogContentText from "@mui/material/DialogContentText";
 import {DialogTitle, Typography} from "@mui/material";
 import InputWithLabel from "../../shared/components/InputWithLabel";
 import CustomPrimaryButton from "../../shared/components/CustomPrimaryButton";
-
+import {connect} from "react-redux"
+import {getActions} from "../../store/actions/friendsActions"
 
 const AddFriendDialog = ({
                              isDialogOpen,
@@ -70,5 +71,11 @@ const AddFriendDialog = ({
         </div>
     );
 };
+
+const mapActionsToProps = (dispatch) => {
+    return {
+        ...getActions(dispatch)
+    }
+}
 
 export default AddFriendDialog;
