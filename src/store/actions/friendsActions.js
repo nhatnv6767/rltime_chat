@@ -1,3 +1,5 @@
+import {openAlertMessage} from "./alertActions";
+
 export const friendsActions = {
     SET_FRIENDS: "FRIENDS.SET_FRIENDS",
     SET_PENDING_FRIENDS_INVITATIONS: "FRIENDS.SET_PENDING_FRIENDS_INVITATIONS",
@@ -14,5 +16,11 @@ export const getActions = (dispatch) => {
 const sendFriendInvitaion = (data, closeDialogHandler) => {
     return async (dispatch) => {
         const response = await api.sendFriendInvitaion(data, closeDialogHandler)
+        if (response.error) {
+            dispatch(openAlertMessage(response.exception?.response?.data))
+        } else {
+            dispatch(openAlertMessage("Invitation has been sent!"))
+            closeDialogHandler();
+        }
     }
 }
