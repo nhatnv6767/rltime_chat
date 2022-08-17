@@ -78,4 +78,4 @@ const mapActionsToProps = (dispatch) => {
     }
 }
 
-export default AddFriendDialog;
+export default connect(null, mapActionsToProps)(AddFriendDialog);
