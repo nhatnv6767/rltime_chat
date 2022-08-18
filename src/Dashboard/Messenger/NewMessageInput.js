@@ -22,6 +22,16 @@ const Input = styled("input")({
 
 const NewMessageInput = ({chosenChatDetails}) => {
     const [message, setMessage] = useState("")
+
+    const handleMessageValueChange = (event) => {
+        setMessage(event.target.value)
+    }
+
+    const handleKeyPressed = (event) => {
+        if (event.key === "Enter") {
+            handleSendMessage()
+        }
+    }
     return (
         <MainContainer>
             <Input
