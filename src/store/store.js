@@ -1,5 +1,5 @@
 import {composeWithDevTools} from "redux-devtools-extension";
-import {createStore, combineReducers, applyMiddleware} from 'redux';
+import {createStore, combineReducers, applyMiddleware} from '@reduxjs/toolkit';
 import thunk from "redux-thunk";
 import authReducer from "./reducers/authReducer";
 import alertReducer from "./reducers/alertReducer";
