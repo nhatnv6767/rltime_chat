@@ -59,6 +59,9 @@ const Message = ({content, sameAuthor, username, date, sameDay}) => {
                         }}
                     >{date}</span>
                 </Typography>
+                <MessageContent>
+                    {content}
+                </MessageContent>
             </MainContainer>
         </MainContainer>
     );
