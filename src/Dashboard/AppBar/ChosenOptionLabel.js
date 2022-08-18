@@ -11,7 +11,7 @@ const ChosenOptionLabel = ({name}) => {
                 fontWeight: "bold",
             }}
         >
-            {`${name ? name : ""}`}
+            {`${name ? `Chosen conversation: ${name}` : ""}`}
         </Typography>
     );
 };
