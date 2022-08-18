@@ -8,7 +8,7 @@ import friendsReducer from "./reducers/friendsReducer";
 const rootReducer = combineReducers({
     auth: authReducer,
     alert: alertReducer,
-    friendsReducer: friendsReducer,
+    friends: friendsReducer,
 });
 
 const store = createStore(
