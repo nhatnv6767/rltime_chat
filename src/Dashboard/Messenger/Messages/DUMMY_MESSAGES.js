@@ -32,7 +32,7 @@ const DUMMY_MESSAGES = [
     {
         _id: 4,
         content: "hello response first time",
-        sameAuthor: false,
+        sameAuthor: "false",
         author: {
             username: "John",
         },
@@ -42,7 +42,7 @@ const DUMMY_MESSAGES = [
     {
         _id: 5,
         content: "hello response third time",
-        sameAuthor: true,
+        sameAuthor: "true",
         author: {
             username: "John",
         },
