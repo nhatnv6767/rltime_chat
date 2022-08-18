@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {styled} from "@mui/material/styles";
-import Messenger from "./Messenger";
+import Messages from "./Messages/Messages";
 import NewMessageInput from "./NewMessageInput";
 
 const Wrapper = styled("div")({
@@ -14,7 +14,7 @@ const MessengerContent = ({chosenChatDetails}) => {
     }, [chosenChatDetails])
     return (
         <Wrapper>
-            <Messenger/>
+            <Messages/>
             <NewMessageInput/>
         </Wrapper>
     );
