@@ -33,5 +33,6 @@ export const connectWithSocketServer = (userDetails) => {
 };
 
 export const sendDirectMessage = (data) => {
+    console.log("Data", data)
     socket.emit("direct-message", data);
 }
