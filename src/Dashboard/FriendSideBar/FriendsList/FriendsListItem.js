@@ -53,4 +53,4 @@ const mapActionsToProps = (dispatch) => {
     }
 }
 
-export default connect(mapActionsToProps)(FriendsListItem);
+export default connect(null, mapActionsToProps)(FriendsListItem);
