@@ -1,5 +1,6 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
+import {connect} from 'react-redux'
 
 const MainContainer = styled("div")({
     flexGrow: 1,
@@ -8,7 +9,7 @@ const MainContainer = styled("div")({
     display: "flex",
 });
 
-const Messenger = () => {
+const Messenger = ({chosenChatDetails}) => {
     return (
         <MainContainer>
 
@@ -16,5 +17,11 @@ const Messenger = () => {
     );
 };
 
-export default Messenger;
+const mapStoreStateToProps = ({chat}) => {
+    return {
+        ...chat
+    }
+}
+
+export default connect(mapStoreStateToProps)(Messenger);
 
