@@ -18,8 +18,8 @@ const ChosenOptionLabel = ({name}) => {
 
 const mapStoreStateToProps = (state) => {
     return {
-        ...state.chat
+        name: state.chat.chosenChatDetails?.name,
     }
 }
 
-export default ChosenOptionLabel;
+export default connect(mapStoreStateToProps)(ChosenOptionLabel);
