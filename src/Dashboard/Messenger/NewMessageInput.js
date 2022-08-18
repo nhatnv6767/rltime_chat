@@ -32,6 +32,11 @@ const NewMessageInput = ({chosenChatDetails}) => {
             handleSendMessage()
         }
     }
+
+    const handleSendMessage = () => {
+        console.log("Sending message to the server")
+        setMessage("")
+    }
     return (
         <MainContainer>
             <Input
