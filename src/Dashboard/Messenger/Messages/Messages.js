@@ -1,8 +1,10 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
 import MessagesHeader from "./MessagesHeader"
+import {connect} from "react-redux"
 
-const Messages = () => {
+
+const Messages = ({chosenChatDetails, messages}) => {
     return (
         <div>
 
@@ -10,4 +12,10 @@ const Messages = () => {
     );
 };
 
-export default Messages;
+const mapStoreStateToProps = ({chat}) => {
+    return {
+        ...chat,
+    }
+}
+
+export default connect(mapStoreStateToProps)(Messages);
