@@ -3,8 +3,17 @@ import Button from '@mui/material/Button';
 import Avatar from "../../../shared/components/Avatar";
 import {Typography} from "@mui/material";
 import OnlineIndicator from "./OnlineIndicator";
+import {chatTypes, setChosenChatDetails} from "../../../store/actions/chatActions";
 
 const FriendsListItem = ({id, username, isOnline}) => {
+
+    const handleChooseActiveConversation = () => {
+        setChosenChatDetails({
+            id: id,
+            name: username
+        }, chatTypes.DIRECT)
+    }
+
     return (
         <Button
             style={{
