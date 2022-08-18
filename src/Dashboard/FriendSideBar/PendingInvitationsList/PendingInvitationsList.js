@@ -12,10 +12,10 @@ const MainContainer = styled("div")({
     overflow: "auto",
 });
 
-const PendingInvitationsList = () => {
+const PendingInvitationsList = ({pendingFriendInvitations}) => {
     return (
         <MainContainer>
-            {DUMMY_INVITATIONS.map((invitation) => (
+            {pendingFriendInvitations?.map((invitation) => (
                 <PendingInvitationsListItem
                     key={invitation._id}
                     id={invitation._id}
