@@ -13,7 +13,7 @@ import {getActions} from "../../store/actions/friendsActions"
 const AddFriendDialog = ({
                              isDialogOpen,
                              closeDialogHandler,
-                             sendFriendInvitaion = () => {
+                             sendFriendInvitation = () => {
                              }
 
                          }) => {
@@ -22,7 +22,7 @@ const AddFriendDialog = ({
     const [isFormValid, setIsFormValid] = useState("");
 
     const handleSendInvitation = (invitation) => {
-        sendFriendInvitaion({
+        sendFriendInvitation({
                 targetMailAddress: mail,
             }, handleCloseDialog
         )
