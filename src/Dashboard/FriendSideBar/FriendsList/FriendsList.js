@@ -11,10 +11,10 @@ const MainContainer = styled("div")({
 
 });
 
-const FriendsList = ({friends}) => {
+const FriendsList = ({friends, onlineUsers}) => {
     return (
         <MainContainer>
-            {friends?.map((f) => (
+            {checkOnlineUsers(friends, onlineUsers).map((f) => (
                 <FriendsListItem
                     username={f.username}
                     id={f.id}
