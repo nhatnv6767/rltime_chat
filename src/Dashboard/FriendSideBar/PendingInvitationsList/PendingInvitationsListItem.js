@@ -22,8 +22,6 @@ const PendingInvitationsListItem = ({
         rejectFriendInvitation({id});
         setButtonsDisabled(true);
     };
-    console.log("WHY NOT HERE")
-    console.log("INFOR INVITATION: ", id)
     return (
         <Tooltip
             title={mail}
