@@ -27,6 +27,7 @@ export const connectWithSocketServer = (userDetails) => {
     })
 
     socket.on("online-users", (data) => {
-        console.log("Online users update came")
+        const {onlineUsers} = data;
+        store.dispatch(setOnlineUsers(onlineUsers))
     })
 };
