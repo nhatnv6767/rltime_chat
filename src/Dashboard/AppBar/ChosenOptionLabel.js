@@ -1,5 +1,6 @@
 import React from 'react';
 import {Typography} from "@mui/material";
+import {connect} from 'react-redux'
 
 const ChosenOptionLabel = ({name}) => {
     return (
@@ -14,5 +15,11 @@ const ChosenOptionLabel = ({name}) => {
         </Typography>
     );
 };
+
+const mapStoreStateToProps = (state) => {
+    return {
+        ...state.chat
+    }
+}
 
 export default ChosenOptionLabel;
