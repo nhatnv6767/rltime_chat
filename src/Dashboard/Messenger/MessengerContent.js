@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {styled} from "@mui/material/styles";
 import Messenger from "./Messenger";
 import NewMessageInput from "./NewMessageInput";
 
-const MessengerContent = () => {
-    return (
-        <div>
+const Wrapper = styled("div")({
+    flexGrow: 1,
+})
 
-        </div>
+const MessengerContent = ({chosenChatDetails}) => {
+    useEffect(() => {
+        // TODO
+        //fetching chat history from specific user id
+    }, [chosenChatDetails])
+    return (
+        <Wrapper>
+            <Messenger/>
+            <NewMessageInput/>
+        </Wrapper>
     );
 };
 
