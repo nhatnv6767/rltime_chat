@@ -41,6 +41,19 @@ const Message = ({content, sameAuthor, username, date, sameDay}) => {
     }
     return (
         <MainContainer>
+            <AvatarContainer>
+                <Avatar username={username}/>
+            </AvatarContainer>
+            <MainContainer>
+                <Typography
+                    style={{
+                        fontSize: "16px",
+                        color: "white",
+                    }}
+                >
+                    {username}
+                </Typography>
+            </MainContainer>
         </MainContainer>
     );
 };
