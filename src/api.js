@@ -70,6 +70,17 @@ export const acceptFriendInvitation = async (data) => {
         }
     }
 }
+export const rejectFriendInvitation = async (data) => {
+    try {
+        return await apiClient.post("/friend-invitation/reject", data)
+    } catch (exception) {
+        checkResponseCode(exception)
+        return {
+            error: true,
+            exception,
+        }
+    }
+}
 
 const checkResponseCode = (exception) => {
     const responseCode = exception?.response?.status;
