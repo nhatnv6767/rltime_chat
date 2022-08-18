@@ -14,11 +14,11 @@ const PendingInvitationsListItem = ({
 
                                     }) => {
     const [buttonsDisabled, setButtonsDisabled] = useState(false);
-    const handleAcceptInvitaion = () => {
+    const handleAcceptInvitation = () => {
         acceptFriendInvitation({id});
         setButtonsDisabled(true);
     };
-    const handleRejectInvitaion = () => {
+    const handleRejectInvitation = () => {
         rejectFriendInvitation({id});
         setButtonsDisabled(true);
     };
@@ -51,8 +51,8 @@ const PendingInvitationsListItem = ({
                     </Typography>
                     <InvitationDecisionButtons
                         disabled={buttonsDisabled}
-                        acceptInvitationHandler={handleAcceptInvitaion}
-                        rejectInvitationHandler={handleRejectInvitaion}
+                        acceptInvitationHandler={handleAcceptInvitation}
+                        rejectInvitationHandler={handleRejectInvitation}
                     />
                 </Box>
             </div>
