@@ -11,10 +11,11 @@ const MainContainer = styled("div")({
 });
 
 const checkOnlineUsers = (friends = [], onlineUsers = []) => {
-    friends.forEach(f => {
-        const isUserOnline = onlineUsers.find(user => user.userId === f.id);
-        f.isOnline = isUserOnline ? true : false
+    friends.forEach((f) => {
+        const isUserOnline = onlineUsers.find((user) => user.userId === f.id);
+        f.isOnline = !!isUserOnline
     })
+    return friends
 }
 
 const FriendsList = ({friends, onlineUsers}) => {
