@@ -12,7 +12,7 @@ const MainContainer = styled("div")({
 const Messenger = ({chosenChatDetails}) => {
     return (
         <MainContainer>
-
+            {!chosenChatDetails ? (<WelcomeMessage/>) : (<MessengerContent/>)}
         </MainContainer>
     );
 };
