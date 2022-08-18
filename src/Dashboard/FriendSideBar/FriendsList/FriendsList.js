@@ -8,8 +8,14 @@ const MainContainer = styled("div")({
     /* Telling the component to take up all the space it can. */
     flexGrow: 1,
     width: "100%",
-
 });
+
+const checkOnlineUsers = (friends = [], onlineUsers = []) => {
+    friends.forEach(f => {
+        const isUserOnline = onlineUsers.find(user => user.userId === f.id);
+        f.isOnline = isUserOnline ? true : false
+    })
+}
 
 const FriendsList = ({friends, onlineUsers}) => {
     return (
