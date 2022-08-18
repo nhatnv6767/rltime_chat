@@ -13,7 +13,12 @@ const Wrapper = styled("div")({
 const WelcomeMessage = () => {
     return (
         <Wrapper>
-            <Typography>To start chatting - choose conversation</Typography>
+            <Typography
+                variant="h6"
+                sx={{color: "white"}}
+            >
+                To start chatting - choose conversation
+            </Typography>
         </Wrapper>
     );
 };
