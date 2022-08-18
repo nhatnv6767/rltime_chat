@@ -44,7 +44,7 @@ const Message = ({content, sameAuthor, username, date, sameDay}) => {
             <AvatarContainer>
                 <Avatar username={username}/>
             </AvatarContainer>
-            <MainContainer>
+            <MessageContainer>
                 <Typography
                     style={{
                         fontSize: "16px",
@@ -62,7 +62,7 @@ const Message = ({content, sameAuthor, username, date, sameDay}) => {
                 <MessageContent>
                     {content}
                 </MessageContent>
-            </MainContainer>
+            </MessageContainer>
         </MainContainer>
     );
 };
