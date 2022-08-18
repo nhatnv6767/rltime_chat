@@ -1,10 +1,17 @@
 import React from 'react';
+import {Typography} from "@mui/material";
 
-const ChosenOptionLabel = () => {
+const ChosenOptionLabel = ({name}) => {
     return (
-        <div>
-
-        </div>
+        <Typography
+            sx={{
+                fontSize: "16px",
+                color: "white",
+                fontWeight: "bold",
+            }}
+        >
+            {`${name ? name : ""}`}
+        </Typography>
     );
 };
 
