@@ -27,6 +27,15 @@ const MessagesHeader = ({name = ""}) => {
             >
                 {name}
             </Typography>
+            <Typography
+                sx={{
+                    color: "#b9bbbe",
+                    marginLeft: "5px",
+                    marginRight: "5px"
+                }}
+            >
+                This is the beginning of your conversation with {name}
+            </Typography>
         </MainContainer>
     );
 };
