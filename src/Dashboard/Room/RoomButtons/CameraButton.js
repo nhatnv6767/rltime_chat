@@ -13,7 +13,10 @@ const CameraButton = () => {
     }
 
     return (
-        <IconButton onClick={handleToggleCamera}>
+        <IconButton
+            onClick={handleToggleCamera}
+            style={{color: 'white'}}
+        >
             {
                 cameraEnabled ? <VideocamIcon/> : <VideocamOffIcon/>
             }
