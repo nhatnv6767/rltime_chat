@@ -33,6 +33,10 @@ const Room = () => {
         <MainContainer
             style={isRoomMinimized ? minimizedRoomStyle : fullScreenRoomStyle}
         >
+            <ResizeRoomButton
+                isRoomMinimized={isRoomMinimized}
+                handleRoomResize={roomResizeHandler}
+            />
         </MainContainer>
     );
 };
