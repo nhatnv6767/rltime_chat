@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {styled} from "@mui/material/styles";
 
 const MainContainer = styled("div")({
@@ -24,6 +24,11 @@ const minimizedRoomStyle = {
 }
 
 const Room = () => {
+    const [isRoomMinimized, setIsRoomMinimized] = useState(true);
+
+    const roomResizeHandler = () => {
+        setIsRoomMinimized(!isRoomMinimized)
+    }
     return (
         <MainContainer>
         </MainContainer>
