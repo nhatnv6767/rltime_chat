@@ -1,5 +1,6 @@
 import React from 'react';
 import {Tooltip} from "@mui/material";
+import Button from "@mui/material/Button";
 
 const ActiveRoomButton = ({
                               creatorUsername,
@@ -18,8 +19,16 @@ const ActiveRoomButton = ({
     const roomTitle = `Creator: ${creatorUsername}. Connected: ${amountOfParticipants}`;
 
     return (
-        <Tooltip>
-
+        <Tooltip
+            title={roomTitle}
+        >
+            <div>
+                <Button
+                    disabled={activeRoomButtonDisabled || isUserInRoom}
+                    onClick={handleJoinActiveRoom}
+                >
+                </Button>
+            </div>
         </Tooltip>
     );
 };
