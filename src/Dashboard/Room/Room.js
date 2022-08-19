@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {styled} from "@mui/material/styles";
+import ResizeRoomButton from "./ResizeRoomButton";
 
 const MainContainer = styled("div")({
     position: "absolute",
