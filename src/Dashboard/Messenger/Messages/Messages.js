@@ -42,12 +42,19 @@ const Messages = ({chosenChatDetails, messages}) => {
                         && convertDateToHumanReadable(new Date(message.date), "dd/mm/yy")
                         === convertDateToHumanReadable(new Date(message[index - 1].date), "dd/mm/yy")
 
+                    console.log(message.date)
+                    console.log(convertDateToHumanReadable(new Date(message.date), "dd/mm/yy"))
                     return <Message
                         key={message._id}
                         content={message.content}
                         username={message.author.username}
                         sameAuthor={sameAuthor}
-                        date={message.date}
+                        date={
+                            convertDateToHumanReadable(
+                                new Date(message.date),
+                                "dd/mm/yy"
+                            )
+                        }
                         sameDay={sameDay}
                     />
 
