@@ -11,7 +11,7 @@ export const roomActions = {
 export const setOpenRoom = (isUserRoomCreator = false, isUserInRoom = false) => {
     return {
         type: roomActions.OPEN_ROOM,
-        isUserRoomCreator: isUserRoomCreator,
-        isUserInRoom: isUserInRoom
+        isUserRoomCreator,
+        isUserInRoom,
     }
 }
