@@ -1,5 +1,6 @@
 import store from "../store/store";
+import {setOpenRoom} from "../store/actions/roomActions";
 
 export const createNewRoom = () => {
-    store.dispatch()
+    store.dispatch(setOpenRoom(true, true));
 }
