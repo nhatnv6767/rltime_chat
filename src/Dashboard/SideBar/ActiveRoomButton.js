@@ -1,6 +1,11 @@
 import React from 'react';
 
-const ActiveRoomButton = () => {
+const ActiveRoomButton = ({
+                              creatorUsername,
+                              roomId,
+                              amountOfParticipants,
+                              isUserInRoom,
+                          }) => {
     return (
         <div>
 
