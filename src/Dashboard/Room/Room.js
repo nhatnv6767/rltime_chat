@@ -30,7 +30,9 @@ const Room = () => {
         setIsRoomMinimized(!isRoomMinimized)
     }
     return (
-        <MainContainer>
+        <MainContainer
+            style={isRoomMinimized ? minimizedRoomStyle : fullScreenRoomStyle}
+        >
         </MainContainer>
     );
 };
