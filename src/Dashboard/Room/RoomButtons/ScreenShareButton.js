@@ -7,13 +7,13 @@ const ScreenShareButton = () => {
 
     const [isScreenSharingActive, setIsScreenSharingActive] = useState(false);
 
-    const handleToggleScreenShare = () => {
+    const handleScreenShareToggle = () => {
         setIsScreenSharingActive(!isScreenSharingActive);
     }
 
     return (
         <IconButton
-            onClick={handleToggleScreenShare}
+            onClick={handleScreenShareToggle}
             style={{color: 'white'}}
         >
             {
