@@ -20,10 +20,12 @@ const DateLabel = styled("span")({
     fontSize: "14px",
 })
 
-const DateSeparator = () => {
+const DateSeparator = ({date}) => {
     return (
         <Separator>
-
+            <DateLabel>
+                {date}
+            </DateLabel>
         </Separator>
     );
 };
