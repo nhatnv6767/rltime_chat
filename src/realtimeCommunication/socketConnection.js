@@ -36,3 +36,7 @@ export const sendDirectMessage = (data) => {
     console.log("Data", data)
     socket.emit("direct-message", data);
 }
+
+export const getDirectChatHistory = (data) => {
+    socket.emit("direct-chat-history")
+}
