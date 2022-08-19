@@ -39,8 +39,8 @@ const Messages = ({chosenChatDetails, messages}) => {
                         && messages[index].author._id === messages[index - 1].author._id
 
                     const sameDay = index > 0 && message.length
-                        && convertDateToHumanReadable(new Date(message.date), "dd/mm/yy")
-                        === convertDateToHumanReadable(new Date(message[index - 1].date), "dd/mm/yy")
+                        && convertDateToHumanReadable(new Date(messages[index].date), "dd/mm/yy")
+                        === convertDateToHumanReadable(new Date(messages[index - 1].date), "dd/mm/yy")
 
 
                     return (
