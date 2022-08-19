@@ -15,7 +15,10 @@ const MainContainer = styled("div")({
 const RoomButtons = () => {
     return (
         <MainContainer>
-
+            <ScreenShareButton/>
+            <MicButton/>
+            <CloseRoomButton/>
+            <CameraButton/>
         </MainContainer>
     );
 };
