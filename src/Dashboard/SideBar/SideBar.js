@@ -3,6 +3,7 @@ import {styled} from "@mui/material/styles";
 import MainPageButton from "./MainPageButton";
 import CreateRoomButton from "./CreateRoomButton";
 import {connect} from 'react-redux';
+import ActiveRoomButton from "./ActiveRoomButton";
 
 const MainContainer = styled("div")({
     width: "72px",
