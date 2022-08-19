@@ -22,14 +22,15 @@ const Messages = ({chosenChatDetails, messages}) => {
             {
                 messages.map((message, index) => {
 
-                    const sameAuthor = index > 0 && messages[index].author._id
-                        === messages[index - 1].author._id
+                    /* Checking if the current message is from the same author as the previous message. */
+                    const sameAuthor = index > 0
+                        && messages[index].author._id === messages[index - 1].author._id
 
                     return <Message
                         key={message._id}
                         content={message.content}
                         username={message.author.username}
-                        sameAuthor={message.sameAuthor}
+                        sameAuthor={sameAuthor}
                         date={message.date}
                         sameDay={message.sameDay}
                     />
