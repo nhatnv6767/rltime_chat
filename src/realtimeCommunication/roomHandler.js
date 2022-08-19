@@ -1,6 +1,7 @@
 import store from "../store/store";
 import {setOpenRoom, setRoomDetails, setActiveRooms} from "../store/actions/roomActions";
 import * as socketConnection from "./socketConnection"
+import room from "../Dashboard/Room/Room";
 
 export const createNewRoom = () => {
     store.dispatch(setOpenRoom(true, true));
@@ -28,4 +29,10 @@ export const updateActiveRooms = (data) => {
     })
 
     store.dispatch(setActiveRooms(rooms));
+}
+
+export const joinRoom = (roomId) => {
+    store.dispatch(setRoomDetails({roomId}));
+    store.dispatch(openRoom(false, true));
+    socketConnection.joinRoom({roomId})
 }
