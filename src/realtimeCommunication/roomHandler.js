@@ -1,5 +1,5 @@
 import store from "../store/store";
-import {setOpenRoom, setRoomDetails} from "../store/actions/roomActions";
+import {setOpenRoom, setRoomDetails, setActiveRooms} from "../store/actions/roomActions";
 import * as socketConnection from "./socketConnection"
 
 export const createNewRoom = () => {
@@ -26,4 +26,6 @@ export const updateActiveRooms = (data) => {
             }
         })
     })
+
+    store.dispatch(setActiveRooms(rooms));
 }
