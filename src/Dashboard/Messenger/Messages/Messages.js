@@ -13,6 +13,18 @@ const MainContainer = styled("div")({
     alignItems: "center",
 })
 
+const convertDateToHumanReadable = (date, format) => {
+    const map = {
+        mm: date.getMonth() + 1,
+        dd: date.getDate(),
+        yy: date.getFullYear().toString().slice(-2),
+        yyyy: date.getFullYear(),
+    }
+
+    /* Replacing the matched string with the value in the map object. */
+    return format.replace(/mm|dd|yy|yyyy/gi, (matched) => map[matched])
+}
+
 const Messages = ({chosenChatDetails, messages}) => {
     return (
         <MainContainer>
@@ -27,8 +39,8 @@ const Messages = ({chosenChatDetails, messages}) => {
                         && messages[index].author._id === messages[index - 1].author._id
 
                     const sameDay = index > 0
-                        && convertDateToHumanReadable(new Date(message.date))
-                        === convertDateToHumanReadable(new Date(message[index - 1].date))
+                        && convertDateToHumanReadable(new Date(message.date), "dd/mm/yy")
+                        === convertDateToHumanReadable(new Date(message[index - 1].date), "dd/mm/yy")
 
                     return <Message
                         key={message._id}
