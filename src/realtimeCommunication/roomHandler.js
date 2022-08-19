@@ -15,4 +15,15 @@ export const newRoomCreated = (data) => {
 
 export const updateActiveRooms = (data) => {
     const {activeRooms} = data;
+
+    const friends = store.getState().friends.friends;
+    const rooms = [];
+
+    activeRooms.forEach(room => {
+        friends.forEach(f => {
+            if (f.id === room.creatorId) {
+                rooms.push({...room, creatorUsername: f.username})
+            }
+        })
+    })
 }
