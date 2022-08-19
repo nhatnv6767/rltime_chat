@@ -44,6 +44,7 @@ const Messages = ({chosenChatDetails, messages}) => {
 
                     console.log(message.date)
                     console.log(convertDateToHumanReadable(new Date(message.date), "dd/mm/yy"))
+                    console.log(messages)
                     return <Message
                         key={message._id}
                         content={message.content}
