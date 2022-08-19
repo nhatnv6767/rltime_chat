@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 import store from "../store/store";
 import {setPendingFriendsInvitations, setFriends, setOnlineUsers} from "../store/actions/friendsActions";
-import updateDirectChatHistoryIfActive from "../shared/utils/chat"
+import {updateDirectChatHistoryIfActive} from "../shared/utils/chat"
 
 let socket = null;
 export const connectWithSocketServer = (userDetails) => {

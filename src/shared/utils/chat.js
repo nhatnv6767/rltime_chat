@@ -1,7 +1,7 @@
 import store from "../../store/store"
 import {setMessages} from "../../store/actions/chatActions"
 
-const updateDirectChatHistoryIfActive = (data) => {
+export const updateDirectChatHistoryIfActive = (data) => {
     const {participants, messages} = data;
 
     // find id of user from token and id from active conversation
@@ -19,4 +19,18 @@ const updateDirectChatHistoryIfActive = (data) => {
     }
 }
 
-module.exports = updateDirectChatHistoryIfActive;
+const updateChatHistoryIfSameConversationActive = ({
+                                                       participants,
+                                                       usersInConversation,
+                                                       messages,
+                                                   }) => {
+    const result = participants.every(function (participantId) {
+        /* Checking if the user is in the conversation. */
+        return usersInConversation.includes(participantId)
+    })
+
+    if (result) {
+        store.dispatch(setMessages(messages));
+    }
+}
+
