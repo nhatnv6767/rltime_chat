@@ -1,11 +1,24 @@
-import React from 'react';
-import {styled} from "@mui/material/styles";
+import React, {useState} from 'react';
+import IconButton from '@mui/material/IconButton'
+import CloseIcon from '@mui/icons-material/Close';
 
 const CloseRoomButton = () => {
-    return (
-        <div>
 
-        </div>
+    const [micEnabled, setMicEnabled] = useState(true);
+
+    const handleLeaveRoom = () => {
+
+    }
+
+    return (
+        <IconButton
+            onClick={handleToggleMic}
+            style={{color: 'white'}}
+        >
+            {
+                micEnabled ? <MicIcon/> : <MicOffIcon/>
+            }
+        </IconButton>
     );
 };
 

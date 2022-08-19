@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {styled} from "@mui/material/styles";
 import IconButton from '@mui/material/IconButton'
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
