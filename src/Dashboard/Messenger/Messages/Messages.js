@@ -26,13 +26,17 @@ const Messages = ({chosenChatDetails, messages}) => {
                     const sameAuthor = index > 0
                         && messages[index].author._id === messages[index - 1].author._id
 
+                    const sameDay = index > 0
+                        && convertDateToHumanReadable(new Date(message.date))
+                        === convertDateToHumanReadable(new Date(message[index - 1].date))
+
                     return <Message
                         key={message._id}
                         content={message.content}
                         username={message.author.username}
                         sameAuthor={sameAuthor}
                         date={message.date}
-                        sameDay={message.sameDay}
+                        sameDay={sameDay}
                     />
 
                 })
