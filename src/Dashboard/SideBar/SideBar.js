@@ -13,11 +13,20 @@ const MainContainer = styled("div")({
     backgroundColor: "#202225"
 });
 
-const SideBar = () => {
+const SideBar = ({activeRooms}) => {
     return (
         <MainContainer>
             <MainPageButton/>
             <CreateRoomButton/>
+            {activeRooms.map((room) => (
+                <ActiveRoomButton
+                    roomId={room.roomId}
+                    creatorUsername={room.creatorUsername}
+                    amountOfParticipants={room.amountOfParticipants}
+                    key={room.roomId}
+                    isUserInRoom={isUserInRoom}
+                />
+            ))}
         </MainContainer>
     );
 };
