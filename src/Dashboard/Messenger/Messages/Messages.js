@@ -38,9 +38,9 @@ const Messages = ({chosenChatDetails, messages}) => {
                     const sameAuthor = index > 0 && messages.length
                         && messages[index].author._id === messages[index - 1].author._id
 
-                    const notSameDay = index > 0 && messages.length
+                    const sameDay = index > 0 && messages.length
                         && convertDateToHumanReadable(new Date(messages[index].date), "dd/mm/yy")
-                        !== convertDateToHumanReadable(new Date(messages[index - 1].date), "dd/mm/yy")
+                        === convertDateToHumanReadable(new Date(messages[index - 1].date), "dd/mm/yy")
 
 
                     return (
@@ -49,7 +49,7 @@ const Messages = ({chosenChatDetails, messages}) => {
                             style={{width: "97%"}}
                         >
                             {
-                                (notSameDay || index === 0) && (
+                                (!sameDay || index === 0) && (
                                     <DateSeparator
                                         date={convertDateToHumanReadable(
                                             new Date(message.date), "dd/mm/yy"
@@ -67,7 +67,7 @@ const Messages = ({chosenChatDetails, messages}) => {
                                         "dd/mm/yy"
                                     )
                                 }
-                                sameDay={!notSameDay}
+                                sameDay={sameDay}
                             />
                         </div>
                     )
