@@ -6,11 +6,11 @@ const CreateRoomButton = () => {
 
     const createNewRoomHandler = () => {
         // creating a room and sending infor to the server about this
-
     }
 
     return (
         <Button
+            onClick={createNewRoomHandler}
             style={{
                 width: "48px",
                 height: "48px",
