@@ -14,7 +14,7 @@ const MainContainer = styled("div")({
     backgroundColor: "#202225"
 });
 
-const SideBar = ({activeRooms}) => {
+const SideBar = ({activeRooms, isUserInRoom}) => {
     return (
         <MainContainer>
             <MainPageButton/>
