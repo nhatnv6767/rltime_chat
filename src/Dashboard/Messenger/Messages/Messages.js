@@ -44,7 +44,19 @@ const Messages = ({chosenChatDetails, messages}) => {
 
 
                     return (
-                        <div key={message._id}>
+                        <div
+                            key={message._id}
+                            style={{width: "97%"}}
+                        >
+                            {
+                                (!sameDay || index === 0) && (
+                                    <DateSeparator
+                                        date={convertDateToHumanReadable(
+                                            new Date(message.date), "dd/mm/yy"
+                                        )}
+                                    />
+                                )
+                            }
                             <Message
                                 content={message.content}
                                 username={message.author.username}
