@@ -1,4 +1,5 @@
 import React from 'react';
+import {Tooltip} from "@mui/material";
 
 const ActiveRoomButton = ({
                               creatorUsername,
@@ -6,10 +7,20 @@ const ActiveRoomButton = ({
                               amountOfParticipants,
                               isUserInRoom,
                           }) => {
-    return (
-        <div>
 
-        </div>
+    const handleJoinActiveRoom = () => {
+        if (amountOfParticipants < 4) {
+            // join room
+        }
+    }
+
+    const activeRoomButtonDisabled = amountOfParticipants > 3;
+    const roomTitle = `Creator: ${creatorUsername}. Connected: ${amountOfParticipants}`;
+
+    return (
+        <Tooltip>
+
+        </Tooltip>
     );
 };
 
