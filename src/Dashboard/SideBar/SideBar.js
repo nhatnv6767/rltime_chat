@@ -2,6 +2,7 @@ import React from 'react';
 import {styled} from "@mui/material/styles";
 import MainPageButton from "./MainPageButton";
 import CreateRoomButton from "./CreateRoomButton";
+import {connect} from 'react-redux';
 
 const MainContainer = styled("div")({
     width: "72px",
@@ -21,4 +22,10 @@ const SideBar = () => {
     );
 };
 
-export default SideBar;
+const mapStoreStateToProps = ({room}) => {
+    return {
+        ...room,
+    }
+}
+
+export default connect(mapStoreStateToProps)(SideBar);
