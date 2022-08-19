@@ -22,7 +22,7 @@ const convertDateToHumanReadable = (date, format) => {
     }
 
     /* Replacing the matched string with the value in the map object. */
-    return format.replace(/mm|dd|yy|yyyy/gi, (matched) => map[matched])
+    return format.replace(/mm|dd|yy|yyy/gi, (matched) => map[matched])
 }
 
 const Messages = ({chosenChatDetails, messages}) => {
@@ -35,12 +35,12 @@ const Messages = ({chosenChatDetails, messages}) => {
                 messages.map((message, index) => {
 
                     /* Checking if the current message is from the same author as the previous message. */
-                    const sameAuthor = index > 0 && message.length
+                    const sameAuthor = index > 0 && messages.length
                         && messages[index].author._id === messages[index - 1].author._id
 
-                    const sameDay = index > 0 && message.length
+                    const notSameDay = index > 0 && messages.length
                         && convertDateToHumanReadable(new Date(messages[index].date), "dd/mm/yy")
-                        === convertDateToHumanReadable(new Date(messages[index - 1].date), "dd/mm/yy")
+                        !== convertDateToHumanReadable(new Date(messages[index - 1].date), "dd/mm/yy")
 
 
                     return (
@@ -49,7 +49,7 @@ const Messages = ({chosenChatDetails, messages}) => {
                             style={{width: "97%"}}
                         >
                             {
-                                (!sameDay || index === 0) && (
+                                (notSameDay || index === 0) && (
                                     <DateSeparator
                                         date={convertDateToHumanReadable(
                                             new Date(message.date), "dd/mm/yy"
@@ -67,7 +67,7 @@ const Messages = ({chosenChatDetails, messages}) => {
                                         "dd/mm/yy"
                                     )
                                 }
-                                sameDay={sameDay}
+                                sameDay={!notSameDay}
                             />
                         </div>
                     )
