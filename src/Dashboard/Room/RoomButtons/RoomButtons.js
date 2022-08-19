@@ -1,5 +1,9 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
+import ScreenShareButton from "./ScreenShareButton";
+import MicButton from "./MicButton";
+import CameraButton from "./CameraButton";
+import CloseRoomButton from "./CloseRoomButton";
 
 const MainContainer = styled("div")({
     height: "15%",
