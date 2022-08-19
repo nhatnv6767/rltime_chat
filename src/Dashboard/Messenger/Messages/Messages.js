@@ -35,16 +35,14 @@ const Messages = ({chosenChatDetails, messages}) => {
                 messages.map((message, index) => {
 
                     /* Checking if the current message is from the same author as the previous message. */
-                    const sameAuthor = index > 0
+                    const sameAuthor = index > 0 && message.length
                         && messages[index].author._id === messages[index - 1].author._id
 
-                    const sameDay = index > 0
+                    const sameDay = index > 0 && message.length
                         && convertDateToHumanReadable(new Date(message.date), "dd/mm/yy")
                         === convertDateToHumanReadable(new Date(message[index - 1].date), "dd/mm/yy")
 
-                    console.log(message.date)
-                    console.log(convertDateToHumanReadable(new Date(message.date), "dd/mm/yy"))
-                    console.log(messages)
+
                     return <Message
                         key={message._id}
                         content={message.content}
