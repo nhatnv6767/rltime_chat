@@ -38,10 +38,16 @@ const Dashboard = ({setUserDetails, isUserInRoom}) => {
     </Wrapper>);
 };
 
+const mapStoreStateToProps = ({room}) => {
+    return {
+        ...room,
+    }
+}
+
 const mapActionsToProps = (dispatch) => {
     return {
         ...getActions(dispatch),
     };
 };
 
-export default connect(null, mapActionsToProps)(Dashboard);
+export default connect(mapStoreStateToProps, mapActionsToProps)(Dashboard);
