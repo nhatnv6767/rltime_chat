@@ -20,7 +20,11 @@ const Messages = ({chosenChatDetails, messages}) => {
                 name={chosenChatDetails?.name}
             />
             {
-                DUMMY_MESSAGES.map((message, index) => {
+                messages.map((message, index) => {
+
+                    const sameAuthor = index > 0 && messages[index].author._id
+                        === messages[index - 1].author._id
+
                     return <Message
                         key={message._id}
                         content={message.content}
