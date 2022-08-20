@@ -17,5 +17,8 @@ export const getLocalStreamPreview = (onlyAudio = false, callbackFunc) => {
     navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
         store.dispatch(setLocalStream(stream))
         callbackFunc()
+    }).catch((err) => {
+        console.log(err)
+        console.log("Cannot get an access to local stream")
     })
 }
