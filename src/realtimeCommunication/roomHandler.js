@@ -50,7 +50,7 @@ export const joinRoom = (roomId) => {
 }
 
 export const leaveRoom = () => {
-    const roomId = store.getState().room.roomDetails.roomId;
+    const roomId = store.getState().room.roomDetails?.roomId;
 
     socketConnection.leaveRoom({roomId})
     store.dispatch(setRoomDetails(null))
