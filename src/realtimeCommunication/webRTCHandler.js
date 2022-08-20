@@ -1,3 +1,5 @@
+import store from "../store/store";
+
 const onlyAudioConstraints = {
     audio: true,
     video: false,
