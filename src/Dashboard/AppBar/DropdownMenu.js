@@ -35,6 +35,9 @@ export default function DropdownMenu() {
                 }}
             >
                 <MenuItem onClick={logout}>Logout</MenuItem>
+                <MenuItem onClick={handleAudioOnlyChange}>
+                    {audioOnly ? "Audio Only Enabled" : "Audio Only Disabled"}
+                </MenuItem>
             </Menu>
         </div>
     );
