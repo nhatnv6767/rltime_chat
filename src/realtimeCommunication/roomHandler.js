@@ -1,11 +1,14 @@
 import store from "../store/store";
 import {setOpenRoom, setRoomDetails, setActiveRooms} from "../store/actions/roomActions";
 import * as socketConnection from "./socketConnection"
-import room from "../Dashboard/Room/Room";
+import * as webRTCHandler from "./webRTCHandler"
 
 export const createNewRoom = () => {
-    store.dispatch(setOpenRoom(true, true));
-    socketConnection.createNewRoom();
+
+    const successCallbackFunc = () => {
+        store.dispatch(setOpenRoom(true, true));
+        socketConnection.createNewRoom();
+    }
 }
 
 export const newRoomCreated = (data) => {
