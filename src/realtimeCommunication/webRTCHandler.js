@@ -10,4 +10,6 @@ const defaultConstraints = {
 
 export const getLocalStreamPreview = (onlyAudio = false, callbackFunc) => {
     const constraints = onlyAudio ? onlyAudioConstraints : defaultConstraints;
+
+    navigator.mediaDevices.getUserMedia(constraints)
 }
