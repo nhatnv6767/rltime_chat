@@ -43,7 +43,8 @@ export const joinRoom = (roomId) => {
         store.dispatch(setOpenRoom(false, true));
         socketConnection.joinRoom({roomId})
     }
-    
+
+    webRTCHandler.getLocalStreamPreview(false, successCallbackFunc)
 }
 
 export const leaveRoom = () => {
