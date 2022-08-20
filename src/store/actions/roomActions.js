@@ -18,7 +18,7 @@ export const setOpenRoom = (isUserRoomCreator = false, isUserInRoom = false) => 
 
 export const getActions = (dispatch) => {
     return {
-        setAudioOnly: (onlyAudio) => dispatch(setAudioOnly(onlyAudio)),
+        setAudioOnly: (audioOnly) => dispatch(setAudioOnly(audioOnly)),
     }
 }
 
