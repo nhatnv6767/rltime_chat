@@ -56,5 +56,13 @@ export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
     peers[connUserSocketId] = new Peer({
         initiator: isInitiator,
         config: getConfiguration(),
+        stream: localStream,
+    })
+
+    peers[connUserSocketId].on("signal", data => {
+        const signalData = {
+            signal: data,
+            connUserSocketId: connUserSocketId,
+        }
     })
 }
