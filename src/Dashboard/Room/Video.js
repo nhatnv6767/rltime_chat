@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {styled} from "@mui/material/styles";
 
 const MainContainer = styled("div")({
@@ -14,12 +14,24 @@ const VideoEl = styled("video")({
 })
 
 const Video = ({stream, isLocalStream}) => {
+
+    const videoRef = useRef()
+
+    useEffect(() => {
+        const video = videoRef.current;
+        /* Setting the video source to the stream. */
+        video.srcObject = stream
+        video.onloadedmetadata = () => {
+            video.play();
+        }
+    }, [stream])
+
     return (
         <MainContainer>
             <VideoEl
                 ref={videoRef}
                 autoPlay
-                muted={isLocalStream ? true : false}
+                muted={!!isLocalStream}
             />
         </MainContainer>
     );
