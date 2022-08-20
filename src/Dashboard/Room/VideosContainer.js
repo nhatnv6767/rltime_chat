@@ -1,6 +1,7 @@
 import React from 'react';
 import {styled} from "@mui/material/styles";
 import {connect} from "react-redux"
+import Video from "./Video";
 
 const MainContainer = styled("div")({
     height: "85%",
@@ -9,9 +10,13 @@ const MainContainer = styled("div")({
     flexWrap: "wrap"
 })
 
-const VideosContainer = () => {
+const VideosContainer = ({localStream}) => {
     return (
         <MainContainer>
+            <Video
+                stream={localStream}
+                isLocalStream
+            />
         </MainContainer>
     );
 };
