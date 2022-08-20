@@ -4,8 +4,11 @@ import MenuItem from '@mui/material/MenuItem';
 import {IconButton} from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {logout} from "../../shared/utils/auth";
+import {getActions} from "../../store/actions/roomActions"
+import {connect} from "react-redux";
 
-export default function DropdownMenu() {
+
+const BasicMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -42,3 +45,17 @@ export default function DropdownMenu() {
         </div>
     );
 }
+
+const mapStateToProps = ({room}) => {
+    return {
+        ...room,
+    }
+}
+
+const mapActionsToProps = (dispatch) => {
+    return {
+        ...getActions(dispatch),
+    }
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(BasicMenu);
