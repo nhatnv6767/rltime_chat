@@ -36,3 +36,10 @@ export const setLocalStream = (localStream) => {
         localStream,
     }
 }
+
+export const setAudioOnly = (audioOnly) => {
+    return {
+        type: roomActions.SET_AUDIO_ONLY,
+        audioOnly,
+    }
+}
