@@ -11,8 +11,8 @@ const defaultConstraints = {
     video: true,
 }
 
-export const getLocalStreamPreview = (onlyAudio = false, callbackFunc) => {
-    const constraints = onlyAudio ? onlyAudioConstraints : defaultConstraints;
+export const getLocalStreamPreview = (audioOnly = false, callbackFunc) => {
+    const constraints = audioOnly ? onlyAudioConstraints : defaultConstraints;
 
     navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
         store.dispatch(setLocalStream(stream))
