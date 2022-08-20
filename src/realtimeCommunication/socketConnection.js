@@ -3,6 +3,7 @@ import store from "../store/store";
 import {setPendingFriendsInvitations, setFriends, setOnlineUsers} from "../store/actions/friendsActions";
 import {updateDirectChatHistoryIfActive} from "../shared/utils/chat"
 import * as roomHandler from "./roomHandler";
+import * as webRTCHandler from "./webRTCHandler";
 
 let socket = null;
 export const connectWithSocketServer = (userDetails) => {

@@ -22,3 +22,13 @@ export const getLocalStreamPreview = (audioOnly = false, callbackFunc) => {
         console.log("Cannot get an access to local stream")
     })
 }
+
+export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
+    const localStream = store.getState().room.localStream;
+
+    if (isInitiator) {
+        console.log("Preparing new peer connection as initiator")
+    } else {
+        console.log("Preparing new peer connection as not initiator")
+    }
+}
