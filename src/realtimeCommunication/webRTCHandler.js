@@ -1,5 +1,6 @@
 import store from "../store/store";
 import {setLocalStream} from "../store/actions/roomActions";
+import Peer from "simple-peer";
 
 const onlyAudioConstraints = {
     audio: true,
@@ -23,6 +24,8 @@ export const getLocalStreamPreview = (audioOnly = false, callbackFunc) => {
     })
 }
 
+let peers = {}
+
 export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
     const localStream = store.getState().room.localStream;
 
@@ -31,4 +34,9 @@ export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
     } else {
         console.log("Preparing new peer connection as not initiator")
     }
+
+    peers[connUserSocketId] = new Peer({
+        initiator: isInitiator,
+        config: getConfiguration(),
+    })
 }
