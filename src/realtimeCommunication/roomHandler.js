@@ -9,6 +9,8 @@ export const createNewRoom = () => {
         store.dispatch(setOpenRoom(true, true));
         socketConnection.createNewRoom();
     }
+
+    webRTCHandler.getLocalStreamPreview(false, successCallbackFunc)
 }
 
 export const newRoomCreated = (data) => {
