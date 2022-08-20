@@ -4,11 +4,11 @@ import MenuItem from '@mui/material/MenuItem';
 import {IconButton} from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {logout} from "../../shared/utils/auth";
-import {getActions} from "../../store/actions/roomActions"
+import {getActions, setAudioOnly} from "../../store/actions/roomActions"
 import {connect} from "react-redux";
 
 
-const BasicMenu = () => {
+const BasicMenu = ({audioOnly, setAudioOnly}) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -19,6 +19,9 @@ const BasicMenu = () => {
         setAnchorEl(null);
     };
 
+    const handleAudioOnlyChange = () => {
+        setAudioOnly(!audioOnly)
+    }
 
     return (
         <div>
