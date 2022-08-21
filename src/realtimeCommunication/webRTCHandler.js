@@ -1,5 +1,5 @@
 import store from "../store/store";
-import {setLocalStream} from "../store/actions/roomActions";
+import {setLocalStream, setRemoteStreams} from "../store/actions/roomActions";
 import Peer from "simple-peer";
 import * as socketConnection from "./socketConnection";
 
