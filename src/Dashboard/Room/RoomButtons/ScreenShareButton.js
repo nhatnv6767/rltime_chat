@@ -11,10 +11,17 @@ const ScreenShareButton = ({
                                isScreenSharingActive,
                            }) => {
 
-    const [isScreenSharingActive, setIsScreenSharingActive] = useState(false);
+    const [isScreenSharingActive1, setIsScreenSharingActive] = useState(false);
 
-    const handleScreenShareToggle = () => {
-        setIsScreenSharingActive(!isScreenSharingActive);
+    const handleScreenShareToggle = async () => {
+        if (!isScreenSharingActive) {
+            let stream = null;
+            try {
+                stream = await navigator.mediaDevices.getDisplayMedia(constraints)
+            } catch (err) {
+
+            }
+        }
     }
 
     return (
