@@ -82,6 +82,7 @@ export const handleSignalingData = (data) => {
     const {connUserSocketId, signal} = data;
 
     if (peers[connUserSocketId]) {
+        /* Sending the signal to the peer. */
         peers[connUserSocketId].signal(signal);
     }
 }
