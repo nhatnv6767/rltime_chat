@@ -140,6 +140,7 @@ export const switchOutgoingTracks = (stream) => {
                         stream.getTracks()[index2],
                         peers[socket_id].streams[0]
                     )
+                    break;
                 }
             }
         }
