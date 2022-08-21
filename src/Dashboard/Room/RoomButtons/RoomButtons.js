@@ -4,6 +4,7 @@ import ScreenShareButton from "./ScreenShareButton";
 import MicButton from "./MicButton";
 import CameraButton from "./CameraButton";
 import CloseRoomButton from "./CloseRoomButton";
+import {connect} from "react-redux"
 
 const MainContainer = styled("div")({
     height: "15%",
@@ -27,4 +28,10 @@ const RoomButtons = () => {
     );
 };
 
-export default RoomButtons;
+const mapStoreStateToProps = ({room}) => {
+    return {
+        ...room,
+    }
+}
+
+export default connect(mapStoreStateToProps)(RoomButtons);
