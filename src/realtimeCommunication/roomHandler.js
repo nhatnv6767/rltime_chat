@@ -38,6 +38,9 @@ export const updateActiveRooms = (data) => {
     const rooms = [];
 
     activeRooms.forEach(room => {
+
+        const isRoomCreatedByMe = room.roomCreator.userId === userId;
+
         friends.forEach(f => {
             if (f.id === room.roomCreator.userId) {
                 rooms.push({...room, creatorUsername: f.username})
