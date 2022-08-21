@@ -68,6 +68,9 @@ export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
         // TODO
         // pass signaling data to other users
         // socketConnection.signalPeerData(signalData)
+        socketConnection.signalPeerData(signalData)
+
+
     })
 
     peers[connUserSocketId].on("stream", (remoteStream) => {
