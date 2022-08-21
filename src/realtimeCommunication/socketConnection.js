@@ -58,6 +58,10 @@ export const connectWithSocketServer = (userDetails) => {
         const {connUserSocketId} = data;
         webRTCHandler.prepareNewPeerConnection(connUserSocketId, true)
     })
+
+    socket.on("conn-signal", data => {
+        webRTCHandler.handleSignalingData(data)
+    })
 };
 
 export const sendDirectMessage = (data) => {
