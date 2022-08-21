@@ -99,3 +99,13 @@ const addNewRemoteStream = (remoteStream) => {
 
     store.dispatch(setRemoteStreams(newRemoteStreams))
 }
+
+export const closeAllConnections = () => {
+    /* Iterating through the peers object and destroying each peer. */
+    Object.entries(peers).forEach(mappedObject => {
+        const connUserSocketId = mappedObject[0]
+        if (peers[connUserSocketId]) {
+            peers[connUserSocketId].destroy()
+        }
+    })
+}
