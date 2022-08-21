@@ -119,4 +119,9 @@ export const handleParticipantLeftRoom = (data) => {
         peers[connUserSocketId].destroy()
         delete peers[connUserSocketId]
     }
+
+    const remoteStreams = store.getState().room.remoteStreams;
+    const newRemoteStreams = remoteStreams.filter(remoteStream => {
+        remoteStream.connUserSocketId !== connUserSocketId;
+    })
 }
