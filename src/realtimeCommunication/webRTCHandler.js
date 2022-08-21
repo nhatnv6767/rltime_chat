@@ -75,6 +75,9 @@ export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
     peers[connUserSocketId].on("stream", (remoteStream) => {
         // TODO
         // add new remote stream to our server store
+
+        console.log("Remote stream came from other user")
+        console.log("Direct connection has been established")
     })
 }
 
