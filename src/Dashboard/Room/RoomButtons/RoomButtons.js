@@ -18,10 +18,11 @@ const MainContainer = styled("div")({
     justifyContent: "center",
 })
 
-const RoomButtons = ({localStream}) => {
+const RoomButtons = (props) => {
+    const {localStream} = props;
     return (
         <MainContainer>
-            <ScreenShareButton/>
+            <ScreenShareButton {...props}/>
             <MicButton localStream={localStream}/>
             <CloseRoomButton/>
             <CameraButton localStream={localStream}/>
