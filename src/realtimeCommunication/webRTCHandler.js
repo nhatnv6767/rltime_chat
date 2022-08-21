@@ -111,3 +111,12 @@ export const closeAllConnections = () => {
         }
     })
 }
+
+export const handleParticipantLeftRoom = (data) => {
+    const {connUserSocketId} = data;
+
+    if (peers[connUserSocketId]) {
+        peers[connUserSocketId].destroy()
+        delete peers[connUserSocketId]
+    }
+}
