@@ -34,4 +34,10 @@ const mapStoreStateToProps = ({room}) => {
     }
 }
 
-export default connect(mapStoreStateToProps)(RoomButtons);
+const mapActionsToProps = (dispatch) => {
+    return {
+        ...getActions(dispatch),
+    }
+}
+
+export default connect(mapStoreStateToProps, mapActionsToProps)(RoomButtons);
