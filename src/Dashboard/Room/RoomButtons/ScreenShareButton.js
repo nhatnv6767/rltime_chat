@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import IconButton from '@mui/material/IconButton'
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
-import {setScreenSharingStream} from "../../../store/actions/roomActions";
-import video from "../Video";
 
 const constraints = {
     audio: false,
@@ -16,8 +14,6 @@ const ScreenShareButton = ({
                                setScreenSharingStream,
                                isScreenSharingActive,
                            }) => {
-
-    const [isScreenSharingActive1, setIsScreenSharingActive] = useState(false);
 
     const handleScreenShareToggle = async () => {
         if (!isScreenSharingActive) {
