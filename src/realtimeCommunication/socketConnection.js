@@ -53,6 +53,11 @@ export const connectWithSocketServer = (userDetails) => {
             connUserSocketId: connUserSocketId
         })
     })
+
+    socket.on("conn-init", (data) => {
+        const {connUserSocketId} = data;
+        webRTCHandler.prepareNewPeerConnection(connUserSocketId, true)
+    })
 };
 
 export const sendDirectMessage = (data) => {
