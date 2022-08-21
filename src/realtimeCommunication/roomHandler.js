@@ -64,7 +64,7 @@ export const leaveRoom = () => {
         store.dispatch(setLocalStream(null));
     }
 
-    store.dispatch(setRemoteStreams(null))
+    store.dispatch(setRemoteStreams([]))
     webRTCHandler.closeAllConnections();
 
     socketConnection.leaveRoom({roomId})
