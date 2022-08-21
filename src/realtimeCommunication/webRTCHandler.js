@@ -122,6 +122,8 @@ export const handleParticipantLeftRoom = (data) => {
 
     const remoteStreams = store.getState().room.remoteStreams;
     const newRemoteStreams = remoteStreams.filter(remoteStream => {
+        // eslint-disable-next-line no-unused-expressions
         remoteStream.connUserSocketId !== connUserSocketId;
     })
+    store.dispatch(setRemoteStreams(newRemoteStreams))
 }
