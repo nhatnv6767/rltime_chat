@@ -2,7 +2,6 @@ import React from 'react';
 import {styled} from "@mui/material/styles";
 import {connect} from "react-redux"
 import Video from "./Video";
-import * as stream from "stream";
 
 const MainContainer = styled("div")({
     height: "85%",
