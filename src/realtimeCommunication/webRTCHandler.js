@@ -1,6 +1,7 @@
 import store from "../store/store";
 import {setLocalStream} from "../store/actions/roomActions";
 import Peer from "simple-peer";
+import * as socketConnection from "./socketConnection";
 
 const getConfiguration = () => {
     const turnIceServers = null;

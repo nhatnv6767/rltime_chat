@@ -80,3 +80,7 @@ export const joinRoom = (data) => {
 export const leaveRoom = (data) => {
     socket.emit("room-leave", data)
 }
+
+export const signalPeerData = (data) => {
+    socket.emit("conn-signal", data)
+}
