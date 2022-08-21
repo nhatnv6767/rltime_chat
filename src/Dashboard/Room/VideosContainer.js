@@ -21,6 +21,7 @@ const VideosContainer = ({localStream, remoteStreams}) => {
                 remoteStreams.map(stream =>
                     <Video
                         stream={stream}
+                        key={stream.id}
                     />
                 )
             }
