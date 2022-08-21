@@ -17,13 +17,13 @@ const MainContainer = styled("div")({
     justifyContent: "center",
 })
 
-const RoomButtons = () => {
+const RoomButtons = ({localStream}) => {
     return (
         <MainContainer>
             <ScreenShareButton/>
-            <MicButton/>
+            <MicButton localStream={localStream}/>
             <CloseRoomButton/>
-            <CameraButton/>
+            <CameraButton localStream={localStream}/>
         </MainContainer>
     );
 };
