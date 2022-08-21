@@ -106,6 +106,8 @@ export const closeAllConnections = () => {
         const connUserSocketId = mappedObject[0]
         if (peers[connUserSocketId]) {
             peers[connUserSocketId].destroy()
+            /* Deleting the peer from the peers object. */
+            delete peers[connUserSocketId];
         }
     })
 }
