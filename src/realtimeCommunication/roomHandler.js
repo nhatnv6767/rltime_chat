@@ -1,5 +1,11 @@
 import store from "../store/store";
-import {setOpenRoom, setRoomDetails, setActiveRooms, setLocalStream} from "../store/actions/roomActions";
+import {
+    setOpenRoom,
+    setRoomDetails,
+    setActiveRooms,
+    setLocalStream,
+    setRemoteStreams
+} from "../store/actions/roomActions";
 import * as socketConnection from "./socketConnection"
 import * as webRTCHandler from "./webRTCHandler"
 
@@ -58,6 +64,7 @@ export const leaveRoom = () => {
         store.dispatch(setLocalStream(null));
     }
 
+    store.dispatch(setRemoteStreams(null))
     webRTCHandler.closeAllConnections();
 
     socketConnection.leaveRoom({roomId})
