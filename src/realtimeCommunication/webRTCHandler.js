@@ -80,6 +80,7 @@ export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
         console.log("Direct connection has been established")
 
         remoteStream.connUserSocketId = connUserSocketId;
+        addNewRemoteStream(remoteStream)
     })
 }
 
@@ -90,4 +91,11 @@ export const handleSignalingData = (data) => {
         /* Sending the signal to the peer. */
         peers[connUserSocketId].signal(signal);
     }
+}
+
+const addNewRemoteStream = (remoteStream) => {
+    const remoteStreams = store.getState().room.remoteStreams;
+    const newRemoteStreams = [...remoteStreams, remoteStream]
+
+    store.dispatch(setRemoteStreams(newRemoteStreams))
 }
