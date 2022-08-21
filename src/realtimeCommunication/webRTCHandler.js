@@ -78,6 +78,8 @@ export const prepareNewPeerConnection = (connUserSocketId, isInitiator) => {
 
         console.log("Remote stream came from other user")
         console.log("Direct connection has been established")
+
+        remoteStream.connUserSocketId = connUserSocketId;
     })
 }
 
